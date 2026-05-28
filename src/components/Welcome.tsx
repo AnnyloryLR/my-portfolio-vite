@@ -1,18 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import Typewriter from "typewriter-effect";
 const Welcome = () => {
+    const handleScrollDown = () => {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior:'smooth'
+        }) 
+    }
     return (
-        <WelcomeStyle>                
+        <HeroPage>                
                     <WelcomeText> Welcome! </WelcomeText>
                     <Title> 
                         <Typewriter options={
-                            { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that is my cat: Linus!'],
+                            { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                              autoStart: true, loop: true }} /> 
-                        </Title>
-                
-                    <HireMeButton> Hire Me </HireMeButton>
-
-        </WelcomeStyle>
+                    </Title>
+                    <ScrollArrow onClick={handleScrollDown}/>
+        </HeroPage>
+        
      )
         
             
@@ -21,17 +27,17 @@ const Welcome = () => {
 
 export default Welcome;
 
-const WelcomeStyle = styled.div`
+const HeroPage = styled.div`
    
     height: 100vh;
-    width: 87%;
+    width: 87vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                url('./assets/welcomePage.png') center/cover no-repeat;
-    color: white;
+    color: aliceblue;
     text-align: center;
     padding: 0 20px;
 `
@@ -53,20 +59,23 @@ const WelcomeText = styled.p`
     flex-direction: column;
     align-items: center;            
 `
-const HireMeButton = styled.button`
-    margin-top: 70px;
-    width:150px;
-    height: 40px;
-    background-color: none;
-    border: 2px solid white;
-    border-radius: 20px;
-    color: white;
-    font-size: 0.8rem;
-    cursor: pointer;
-    &:hover {
-        background-color: black;
-        color:#006ff7;
-        border: 2px solid #16171D;
-        transition: color 0.3s ease;
-    }
-`
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+`;
+
+const ScrollArrow = styled(RiArrowDownDoubleLine)`
+  font-size:37px;
+  position:absolute;
+  top: 85vh;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: ${bounce} 2s infinite;
+  color:#ffffff;
+  &:hover {
+    border-top-color: #007bff; 
+  }
+`;
+

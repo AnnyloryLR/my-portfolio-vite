@@ -12,7 +12,7 @@ const NavBar = () => {
         <a href="#about" >About me</a>
         <a href="#skills" >What I do</a>
         <a href="#resume" >Resume</a>
-        <a href="#portfolio" >Portfolio</a>
+        <a href="#portfolio" >My Work</a>
         <a href="#contact">Contact</a>
       </Menu>
     </NavBarStyle>
@@ -22,12 +22,15 @@ const NavBar = () => {
 export default NavBar;
 
 const NavBarStyle = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   background-color: #111418;
-   height: 100vh;
-   width:13%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+  width:13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 const Profile = styled.div`
   margin-top: 2rem;

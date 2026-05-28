@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-const WhatIDo = () => {
+const MyWork = () => {
     
         return (
         <PageStyle>
-            <Title> What I Do</Title>
+            <Title>My Work</Title>
             <Paragraph> </Paragraph>
-            <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
+            <HireMeButton> Hire Me </HireMeButton>
         </PageStyle>
      )
 }
 
-export default WhatIDo;
+export default MyWork;
 
 const PageStyle = styled.div`
     height: 100vh;
@@ -57,17 +57,12 @@ const HireMeButton = styled.button`
     background-color: #555;
     border: 2px solid aliceblue;
     border-radius: 20px;
+    color:aliceblue;
+    font-size: 0.8rem;
     cursor: pointer;
-    a{
-        color:aliceblue;
-        font-size: 0.8rem;
-        text-decoration:none;
-        &:hover{
-            color:#006ff7;
-        }
-    }
     &:hover {
         background-color:#111418;
+        color:#006ff7;
         border: 2px solid #16171D;
         transition: color 0.3s ease;
     }
