@@ -9,7 +9,7 @@ const AboutMe = () => {
                 don't you think? I started learning programming during my PhD. I still like chemistry very much,
                 but I love coding more! I work with programming languages and frameworks for Web Development such
                 as JavaScript, React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far... 
-                Checkout the <a href='#portfolio'>Portfolio</a> section to see my work!</Paragraph>
+                Checkout <a href='#portfolio'>My Work</a> section to see my projects!</Paragraph>
             <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
         </PageStyle>
      )
@@ -47,11 +47,8 @@ const Paragraph = styled.p`
     margin: 0 auto;
     color: #555;
     a {
-        color:#555;
+        color: #007bff;
         text-decoration: none;
-        &:hover {
-            color: #007bff;
-        }
     }
 `
 const HireMeButton = styled.button`
