@@ -63,11 +63,13 @@ const HireMeButton = styled.button`
         color:aliceblue;
         font-size: 0.8rem;
         text-decoration:none;
-        &:hover{
-            color:#006ff7;
-        }
+  
     }
     &:hover {
+        a{
+            color:#006ff7;
+        }
+        
         background-color:#111418;
         border: 2px solid #16171D;
         transition: color 0.3s ease;

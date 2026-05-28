@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import NavBar from './components/NavBar';
 import Welcome from './components/Welcome';
 import AboutMe from './components/AboutMe';
@@ -38,8 +38,4 @@ const Container = styled.div`
     justify-content: center;
 `
 
-const bounce = keyframes`
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
-`;
+

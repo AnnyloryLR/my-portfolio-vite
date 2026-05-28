@@ -1,3 +1,6 @@
+import { DiExtjs, DiJava, DiJavascript1, DiNodejs, DiPython, DiReact } from "react-icons/di";
+import { FiFigma } from "react-icons/fi";
+import { SiStyledcomponents } from "react-icons/si";
 import styled from "styled-components";
 
 
@@ -8,23 +11,67 @@ const WhatIDo = () => {
         <PageStyle>
             <Title> What I Do</Title>
             <GridContainer>   
-                <Paragraph>
-                     <strong>Back end</strong>
+                <Container>
+                    <strong>Back end</strong>
+                    <div>
+                        <DiExtjs className="react-icon"/>
+                        <DiNodejs className="react-icon"/>
+                        <DiPython className="react-icon"/>
+                        <DiJava className="react-icon"/>
 
+                    </div>   
+                 </Container>
+                 <Container>
+                    <strong>Front end</strong>
+                    <div>
+                        <DiJavascript1 className="react-icon"/>
+                        <DiReact className="react-icon"/>
+                        <FiFigma className="react-icon"/>
+                        <SiStyledcomponents className="react-icon"/>
 
-          
-                </Paragraph>
-                <Paragraph> 
-                    <strong>Front end</strong> </Paragraph>
-                <Paragraph> 
-                    <strong>Web Development</strong>
-                </Paragraph>
-                <Paragraph> 
-                    <strong>Databases</strong>
-                </Paragraph>
-                <Paragraph> 
-                    <strong>Software structures</strong>
-                </Paragraph>
+                    </div>   
+                 </Container>
+                 <Container>
+                    <strong>Back end</strong>
+                    <div>
+                        <DiExtjs className="react-icon"/>
+                        <DiNodejs className="react-icon"/>
+                        <DiPython className="react-icon"/>
+                        <DiJava className="react-icon"/>
+
+                    </div>   
+                 </Container>
+                 <Container>
+                    <strong>Back end</strong>
+                    <div>
+                        <DiExtjs className="react-icon"/>
+                        <DiNodejs className="react-icon"/>
+                        <DiPython className="react-icon"/>
+                        <DiJava className="react-icon"/>
+
+                    </div>   
+                 </Container>
+                 <Container>
+                    <strong>Back end</strong>
+                    <div>
+                        <DiExtjs className="react-icon"/>
+                        <DiNodejs className="react-icon"/>
+                        <DiPython className="react-icon"/>
+                        <DiJava className="react-icon"/>
+
+                    </div>   
+                 </Container>
+                 <Container>
+                    <strong>Back end</strong>
+                    <div>
+                        <DiExtjs className="react-icon"/>
+                        <DiNodejs className="react-icon"/>
+                        <DiPython className="react-icon"/>
+                        <DiJava className="react-icon"/>
+
+                    </div>   
+                 </Container>
+
             </GridContainer>
             
             <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
@@ -57,7 +104,6 @@ const Title = styled.h1`
     
 `
 const GridContainer = styled.div`
-    border: 2px solid purple;
     width:75%;
     height:50%;
     display:grid;
@@ -65,20 +111,22 @@ const GridContainer = styled.div`
     gap:20px;
 `
 
-const Paragraph = styled.p`
-    width:300px;
-    border: 2px solid yellow;
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    line-height: 2;
-    text-align: center;
-    margin: 0 auto;
-    color: #b1afaf;
-    a {
-        color:#555;
-        text-decoration: none;
-        &:hover {
-            color: #007bff;
-        }
+const Container = styled.div`
+    display:flex;
+    flex-direction:column;
+    .react-icon{
+        font-size:80px;
+        line-height: 2;
+        text-align: center;
+        margin: 10px;
+        color:#007bff;
+    }
+
+    strong{
+        margin-bottom:20px;
+        color:  #b1afaf;
+        font-size: clamp(1rem, 5vw, 2rem);
+        padding:10px;   
     }
 `
 const HireMeButton = styled.button`
@@ -93,11 +141,13 @@ const HireMeButton = styled.button`
         color:aliceblue;
         font-size: 0.8rem;
         text-decoration:none;
-        &:hover{
-            color:#006ff7;
-        }
+  
     }
     &:hover {
+        a{
+            color:#006ff7;
+        }
+        
         background-color:#111418;
         border: 2px solid #16171D;
         transition: color 0.3s ease;
