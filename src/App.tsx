@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import SideBar from './components/SideBar';
 import Welcome from './components/Welcome';
 import AboutMe from './components/AboutMe';
-import WhatIDo from './components/WhatIDo';
+import WhatIDo from './components/WhatIDo/WhatIDo';
 import Resume from './components/Resume';
 import MyWork from './components/MyWork';
 import Contact from './components/Contact';
