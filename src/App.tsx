@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import NavBar from './components/NavBar';
+import SideBar from './components/SideBar';
 import Welcome from './components/Welcome';
 import AboutMe from './components/AboutMe';
 import WhatIDo from './components/WhatIDo';
@@ -8,12 +8,13 @@ import MyWork from './components/MyWork';
 import Contact from './components/Contact';
 
 
+
 function App() {
   
 
   return (
     <>
-    <NavBar />
+    <SideBar />
     <Container>
       <Welcome />
       <AboutMe />

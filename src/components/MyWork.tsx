@@ -14,6 +14,7 @@ const MyWork = () => {
 export default MyWork;
 
 const PageStyle = styled.div`
+    border-top: 1px outset black;
     height: 100vh;
     width: 87vw;
     display: flex;

@@ -18,6 +18,7 @@ const AboutMe = () => {
 export default AboutMe;
 
 const PageStyle = styled.div`
+    border-top: 1px outset black;
     height: 100vh;
     width: 87vw;
     display: flex;

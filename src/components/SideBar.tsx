@@ -1,6 +1,6 @@
 import styled from  "styled-components";
 
-const NavBar = () => {
+const SideBar = () => {
   return (
     <NavBarStyle>
       <Profile>
@@ -19,7 +19,7 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default SideBar;
 
 const NavBarStyle = styled.nav`
   position: fixed;

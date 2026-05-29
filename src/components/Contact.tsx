@@ -13,6 +13,7 @@ const Contact = () => {
 export default Contact;
 
 const PageStyle = styled.div`
+    border-top: 1px outset black;
     height: 100vh;
     width: 87vw;
     display: flex;
