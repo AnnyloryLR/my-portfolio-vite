@@ -3,7 +3,7 @@ import SideBar from './components/SideBar';
 import Welcome from './components/Welcome';
 import AboutMe from './components/AboutMe';
 import WhatIDo from './components/WhatIDo/WhatIDo';
-import Resume from './components/Resume';
+import Resume from './components/Resume/Resume';
 import MyWork from './components/MyWork';
 import Contact from './components/Contact';
 
