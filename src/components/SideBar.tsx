@@ -27,7 +27,7 @@ const NavBarStyle = styled.nav`
   left: 0;
   height: 100vh;
   background-color: #111418;
-  width:13%;
+  width:13vw;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -10,13 +10,13 @@ const Welcome = () => {
     }
     return (
         <HeroPage>                
-                    <WelcomeText> Welcome! </WelcomeText>
-                    <Title> 
-                        <Typewriter options={
-                            { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
-                             autoStart: true, loop: true }} /> 
-                    </Title>
-                    <ScrollArrow onClick={handleScrollDown}/>
+            <WelcomeText> Welcome! </WelcomeText>
+                <Title> 
+                    <Typewriter options={
+                        { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
+                        autoStart: true, loop: true }} /> 
+                </Title>
+                <ScrollArrow onClick={handleScrollDown}/>
         </HeroPage>
         
      )
@@ -28,13 +28,8 @@ const Welcome = () => {
 export default Welcome;
 
 const HeroPage = styled.div`
-   
-    height: 100vh;
-    width: 87vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                url('./assets/welcomePage.png') center/cover no-repeat;
     color: aliceblue;

@@ -13,30 +13,42 @@ function App() {
   
 
   return (
-    <>
+    <Page>
     <SideBar />
-    <Container>
+    <PageContent>
       <Welcome />
       <AboutMe />
       <WhatIDo />
       <Resume />
       <MyWork />
       <Contact />
-    </Container>
-    </>
+    </PageContent>
+    </Page>
   )
 }
 
 export default App
 
-const Container = styled.div`
-    position: absolute;
-    top: 0;
-    left: 13%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+const Page = styled.div`
+  display: flex;
+  flex-direction: row;  
+  background-color:#111418;
 `
-
+const PageContent = styled.div`
+  border: 1px solid red;
+  position: relative;
+  top:0;
+  left: 13vw;
+  min-height: 100vh;
+  min-width: 84vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:#111418;
+  color: #555;
+  text-align: center;
+  padding: 0 20px;
+   
+`
 

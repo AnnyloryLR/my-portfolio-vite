@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-import { DiCss3, DiExtjs, DiHtml5, DiJava, DiJavascript1, DiJsBadge, DiNodejs, DiPython, DiReact } from "react-icons/di";
-import { FiFigma } from "react-icons/fi";
-import { SiStyledcomponents } from "react-icons/si";
 import { useState } from "react";
 
-const Skill = ({name, iconName}) =>{
+
+const Skill = ({ name, iconName }: { name: string; iconName: React.ReactElement<{ className?: string }> }) => {
 
     const [isHovered, setIsHovered] = useState(false)
     function onHover(){
@@ -14,9 +12,8 @@ const Skill = ({name, iconName}) =>{
         setIsHovered(false);
     };
     return(
-        <Box>
-            { isHovered? name:""}<img className="react-icon" onMouseEnter={() => onHover()}
-                onMouseLeave={() => onHoverOver()}/>                     
+        <Box onMouseOver={onHover} onMouseLeave={onHoverOver}>
+           {isHovered ? <p>{name}</p> : iconName}                   
         </Box>  
     )
 }
@@ -24,7 +21,6 @@ const Skill = ({name, iconName}) =>{
 export default Skill;
 
 const Box = styled.div`
-    border: 1px solid purple;
     display:flex;
     flex-direction:column;
     p{
