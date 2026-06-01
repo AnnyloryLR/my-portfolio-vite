@@ -62,7 +62,7 @@ const HireMeButton = styled.button`
         }
         
         background-color:#111418;
-        border: 2px solid #16171D;
+        border: 2px solid #006ff7;
         transition: color 0.3s ease;
     }
 `

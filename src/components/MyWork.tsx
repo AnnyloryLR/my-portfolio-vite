@@ -42,7 +42,7 @@ const HireMeButton = styled.button`
     margin-top: 70px;
     width:150px;
     height: 40px;
-    background-color: #555;
+    background-color:#111418;
     border: 2px solid aliceblue;
     border-radius: 20px;
     cursor: pointer;
@@ -57,8 +57,7 @@ const HireMeButton = styled.button`
             color:#006ff7;
         }
         
-        background-color:#111418;
-        border: 2px solid #16171D;
+        border: 2px solid #006ff7;
         transition: color 0.3s ease;
     }
 `

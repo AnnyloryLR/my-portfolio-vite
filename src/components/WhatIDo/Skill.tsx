@@ -27,7 +27,7 @@ const Box = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    width:100px;
+    width:90px;
     height:100px;
     border-radius:10px;
     background-color:#555555;
@@ -43,7 +43,7 @@ const Box = styled.div`
         font-size:80px;
         line-height: 2;
         text-align: center;
-        color:#006ff7;
+        color:#007bff;
     }
     
 `
