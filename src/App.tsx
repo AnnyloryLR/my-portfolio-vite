@@ -35,10 +35,10 @@ const Page = styled.div`
   background-color:#111418;
 `
 const PageContent = styled.div`
-  border: 1px solid red;
   position: relative;
   top:0;
   left: 13vw;
+  border-left: 1px outset #141414;
   min-height: 100vh;
   min-width: 84vw;
   display: flex;

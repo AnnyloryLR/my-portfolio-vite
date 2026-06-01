@@ -3,7 +3,7 @@ import styled from "styled-components";
 const AboutMe = () => {
     
         return (
-        <>
+        <AboutMeContainer id="about">
             <Title> About Me</Title>
             <Paragraph> Greetings! I am a Full-Stack Developer with a PhD in Pharmacy, which is rather unconventional, 
                 don't you think? I started learning programming during my PhD. I still like chemistry very much,
@@ -11,12 +11,16 @@ const AboutMe = () => {
                 as JavaScript, React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far... 
                 Checkout <a href='#portfolio'>My Work</a> section to see my projects!</Paragraph>
             <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
-        </>
+        </AboutMeContainer>
      )
 }
 
 export default AboutMe;
 
+const AboutMeContainer = styled.div`
+    min-height: 100vh;
+    width: 100%;
+`
 const Title = styled.h1`
     margin-bottom: 100px;
     display: flex;

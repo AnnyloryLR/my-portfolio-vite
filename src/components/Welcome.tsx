@@ -10,12 +10,12 @@ const Welcome = () => {
     }
     return (
         <HeroPage>                
-            <WelcomeText> Welcome! </WelcomeText>
-                <Title> 
+            <Title> Welcome! </Title>
+                <WelcomeText> 
                     <Typewriter options={
                         { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                         autoStart: true, loop: true }} /> 
-                </Title>
+                </WelcomeText>
                 <ScrollArrow onClick={handleScrollDown}/>
         </HeroPage>
         
@@ -36,8 +36,9 @@ const HeroPage = styled.div`
     text-align: center;
     padding: 0 20px;
 `
-const Title = styled.h1`
-    font-size:  clamp(1rem, 5vw, 2rem);
+const WelcomeText = styled.h1`
+    margin-top: 300px;
+    font-size:  clamp(1rem, 5vw, 1.8rem);
     font-weight: 500;
     color: aliceblue;
     display: flex;
@@ -45,8 +46,8 @@ const Title = styled.h1`
     align-items: center;
     gap: 1rem;
 `
-const WelcomeText = styled.p`
-    margin-bottom:100px;
+const Title = styled.p`
+    margin-top:100px;
     font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 400;
     color: aliceblue;
