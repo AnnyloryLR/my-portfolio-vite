@@ -1,3 +1,4 @@
+import { BiDownload } from "react-icons/bi";
 import styled from "styled-components";
 
 const Resume = () => {
@@ -21,7 +22,7 @@ const Resume = () => {
                     </ResumeCard>
                     <ResumeCard>
                         <Duration> 2007 - 2012 </Duration>
-                        <h6> Bachelor of Science in Pharmacy </h6>
+                        <h6> Bachelor of Pharmacy </h6>
                         <p> Federal University of Goiás</p>
                     </ResumeCard>
                 </Container1>
@@ -44,8 +45,17 @@ const Resume = () => {
                     </ResumeCard>
                 </Container2>
             </GeneralContainer>
+            <ButtonsContainer>
+                <DownloadButton>
+                    <a href='assets/rosa_annylory-lima_eng.pdf' download>
+                    <BiDownload size={20} />
+                        Download CV
+                    </a>
+                </DownloadButton>
             
-            <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
+                <HireMeButton>
+                    <a href='#contact'>Hire Me</a></HireMeButton>
+            </ButtonsContainer>
         </ResumeContainer>
      )
 }
@@ -132,8 +142,42 @@ const Duration = styled.div`
     overflow-wrap: break-word;
     color:#ffffff;
 `
+
+const ButtonsContainer = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+    gap: 20px;
+`
+const DownloadButton = styled.button`
+    width:150px;
+    height: 40px;
+    background-color:#111418;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    cursor: pointer;
+    a{
+        color:aliceblue;
+        font-size: 0.8rem;
+        text-decoration:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+  
+    }
+    &:hover {
+        a{
+            color:#006ff7;
+        }
+        
+        border: 2px solid #006ff7;
+        transition: color 0.3s ease;
+    }
+`
 const HireMeButton = styled.button`
-    margin-top: 70px;
     width:150px;
     height: 40px;
     background-color:#111418;
