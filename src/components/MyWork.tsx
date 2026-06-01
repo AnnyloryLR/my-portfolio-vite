@@ -5,8 +5,28 @@ const MyWork = () => {
         return (
         <>
             <Title>My Work</Title>
-            <Paragraph> </Paragraph>
-            <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
+            <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    gridAutoRows: '100px', // Base height increment unit
+                    gap: '16px'
+                    }}>
+                    {/* Standard item */}
+                    <div style={{ background: '#ddd', p: 10 }}>Short Item</div>
+                    
+                    {/* This item spans 2 row segments vertically (200px + gap) */}
+                    <div style={{ background: '#bbb', gridRow: 'span 2' }}>
+                        Tall Item (Spans 2 rows)
+                    </div>
+                    
+                    <div style={{ background: '#ddd' }}>Short Item</div>
+                    
+                    {/* Spans 2 columns horizontally */}
+                    <div style={{ background: '#999', gridColumn: 'span 2' }}>
+                        Wide Item
+                    </div>
+                    </div>
+             <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
         </>
      )
 }

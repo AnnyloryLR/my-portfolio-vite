@@ -5,44 +5,45 @@ const Resume = () => {
         return (
         <ResumeContainer>
             <PageTitle> Resume </PageTitle>
-            <Subtitle>
-                <h2> Education</h2>
-                <h2>Experience</h2>
-            </Subtitle>
-            <Container1>
-                <ResumeCard>
-                    <Duration> 2025 - 2029 </Duration>
-                    <h6> Bachelor of Software Engineering  </h6>
-                    <p> University Estácio de Sá</p>
-                </ResumeCard>
-                <ResumeCard>
-                    <Duration> 2013 - 2018 </Duration>
-                    <h6> PhD in Science </h6>
-                    <p> University of São Paulo </p>
-                </ResumeCard>
-                <ResumeCard>
-                    <Duration> 2007 - 2012 </Duration>
-                    <h6> Bachelor of Science in Pharmacy </h6>
-                    <p> Federal University of Goiás</p>
-                </ResumeCard>
-            </Container1>
-            <Container2>        
-                <ResumeCard>
-                    <Duration> 2026 - present </Duration>
-                    <h6> Volunteer in Mobile App Development </h6>
-                    <p> Minuto-Offline: React-Native </p>
-                </ResumeCard>
-                <ResumeCard>
-                    <Duration> 2024 - 2025 </Duration>
-                    <h6> Full Stack Developer </h6>
-                    <p> Driven Projects </p>
-                </ResumeCard>
-                <ResumeCard>
-                    <Duration> 2023 - 2024 </Duration>
-                    <h6> Researcher </h6>
-                    <p> Labpharma: Consulting in Analytics and Regulatory </p>
-                </ResumeCard>
-            </Container2>
+        
+            <GeneralContainer>
+                <Container1>
+                    <h2> Education</h2>
+                    <ResumeCard>
+                        <Duration> 2025 - 2029 </Duration>
+                        <h6> Bachelor of Software Engineering  </h6>
+                        <p> University Estácio de Sá</p>
+                    </ResumeCard>
+                    <ResumeCard>
+                        <Duration> 2013 - 2018 </Duration>
+                        <h6> PhD in Science </h6>
+                        <p> University of São Paulo </p>
+                    </ResumeCard>
+                    <ResumeCard>
+                        <Duration> 2007 - 2012 </Duration>
+                        <h6> Bachelor of Science in Pharmacy </h6>
+                        <p> Federal University of Goiás</p>
+                    </ResumeCard>
+                </Container1>
+                <Container2>
+                    <h2>Experience</h2>        
+                    <ResumeCard>
+                        <Duration> 2026 - present </Duration>
+                        <h6> Volunteer in Mobile App Development </h6>
+                        <p> Minuto-Offline: React-Native </p>
+                    </ResumeCard>
+                    <ResumeCard>
+                        <Duration> 2024 - 2025 </Duration>
+                        <h6> Full Stack Developer </h6>
+                        <p> Driven Projects </p>
+                    </ResumeCard>
+                    <ResumeCard>
+                        <Duration> 2023 - 2024 </Duration>
+                        <h6> Researcher </h6>
+                        <p> Labpharma: Consulting in Analytics and Regulatory </p>
+                    </ResumeCard>
+                </Container2>
+            </GeneralContainer>
             
             <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
         </ResumeContainer>
@@ -66,39 +67,46 @@ const PageTitle = styled.h1`
     padding: 20px;
     font-size: clamp(1rem, 5vw, 4rem);
 `
-const Subtitle = styled.div`
+const GeneralContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+`
+const Container1 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap:20px;
     h2{
-        font-size: 1.5rem;
+        margin:0;
+        font-size: 2rem;
         text-align: center;
     }   
 `
-const Container1 = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:20px;
-    padding: 20px;
-`
 const Container2 = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap:20px;
-    padding: 20px;
+    h2{
+        margin:0;
+        font-size: 2rem;
+        text-align: center;
+    }   
 `
 const ResumeCard = styled.div`
     margin: 10px;
     padding: 10px;
-    width:500px;;
+    width:500px;
     display:flex;
     flex-direction:column;
     border-radius:10px;
     background-color:#555555;
     h6{
-        margin:0;
+        margin:10px;
         padding: 10px;
-        font-size: 1rem;
+        font-size: 1.25rem;
         text-align: center;
         color:#ffffff;
     }
