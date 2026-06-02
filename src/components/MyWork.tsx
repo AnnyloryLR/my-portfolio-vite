@@ -1,3 +1,4 @@
+import { FaCode} from "react-icons/fa";
 import styled from "styled-components";
 
 const MyWork = () => {
@@ -6,29 +7,42 @@ const MyWork = () => {
         <MyWorkContainer>
             <Title>My Work</Title>           
             <WorkGrid>
-                <ShortItem>
-                    <img src="https://via.placeholder.com/300x400" alt="Project 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <ShortItem>               
+                    <img src="https://www.tovima.com/wp-content/uploads/2024/01/22/board-games-scaled.jpg"/>
+                    <a href="">
+                        <FaCode color={'#006ff7'} size={50}/>
+                    </a> 
                 </ShortItem>
                     
                 <TallItem>
-                    <img src="https://via.placeholder.com/300x400" alt="Project 1" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                    <video src={"assets/demo/trackIt.mp4"} controls></video>
+                    <a href="https://github.com/AnnyloryLR/TrackIt">
+                        <FaCode color={'#006ff7'} size={30}/>
+                    </a>           
                 </TallItem>
-                    
+                            
                 <ShortItem>
-                    <img src="https://via.placeholder.com/300x400" alt="Project 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />     
+                    <img src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
+                    <a href="https://github.com/AnnyloryLR/driven_recharge">
+                        <FaCode color={'#006ff7'} size={50}/>
+                    </a>    
                 </ShortItem>
 
                 <WideItem>
-                    <img src="https://via.placeholder.com/600x200" alt="Project 5" />
+                    <video src={"assets/demo/parrotsGame.mp4"} controls></video>
+                    <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
+                        <FaCode color={'#006ff7'} size={80}/>
+                    </a> 
+                    
                 </WideItem>
 
                 <TallItem>
-                    <img src="./assets/images/cineflex.png" alt="Project 3" />
+                    <video src={"./assets/demo/cineflex.mp4"} controls></video>
+                    <a href="https://github.com/AnnyloryLR/cineflex">
+                        <FaCode color={'#006ff7'} size={30}/>
+                    </a> 
+                    
                 </TallItem>
-
-                <ShortItem>
-                    <img src="https://via.placeholder.com/300x400" alt="Project 4" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </ShortItem>   
             </WorkGrid>
             
              <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
@@ -39,7 +53,6 @@ const MyWork = () => {
 export default MyWork;
 
 const MyWorkContainer = styled.div`
-    border: 2px solid #eee;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -57,35 +70,83 @@ const Title = styled.h1`
     font-size: clamp(1rem, 5vw, 4rem);
     
 `
+
 const WorkGrid = styled.div`
-    width: 70%;
-    height: 80%;
-    border: 2px solid #ccc;
+    border-top:1px groove #006ff7;
+    border-radius:10px;
+    width: 80%;
+    min-height:70%;
+    height:fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 100px; // Base height increment unit
-    gap: 16px;  
+    gap:50px;  
 `
 const ShortItem = styled.div`
-    background: #ddd;
-    padding: 10px;
+    margin:20px;
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    justify-items:center;
+    align-items:center;
+    width:300px;
+    height:250px;
+    background: #555555;
+    img{
+        margin-top:10px;
+        height:180px;
+        border-radius:30px;
+    }
+    a{
+        padding:10px;
+        text-decoration:none;
+        color: #006ff7;
+        justify-content:center;
+    }
+ 
 `
 const TallItem = styled.div`
-    width: 300px;
-    height: 500px;
-    background: #bbb;
+    margin:20px;
+    border-radius:10px;
     grid-row: span 2; // Spans 2 row segments (200px + gap)
-    padding: 10px;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+    display:flex;
+    flex-direction: column;
+    justify-items:center;
+    width:250px;
+    height:400px;
+    background: #555555;
+    video{
+        margin-top:10px;
+        height:350px;
     }
+    a{
+        padding:10px;
+        text-decoration:none;
+        color: #006ff7;
+        justify-content:center;
+    }
+
+    
 `
 const WideItem = styled.div`
-    background: #999;
+    margin-top:150px;
+    border-radius:10px;
     grid-column: span 2; // Spans 2 columns horizontally
-    padding: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    height:250px;
+    background: #555555;
+    video{
+        height:200px;
+        width:400px;
+    }
+    a{
+        padding:10px;
+        text-decoration:none;
+        color: #006ff7;
+        justify-content:center;
+    }
 `
 const HireMeButton = styled.button`
     margin-top: 70px;
@@ -96,6 +157,9 @@ const HireMeButton = styled.button`
     border-radius: 20px;
     cursor: pointer;
     a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
         color:aliceblue;
         font-size: 0.8rem;
         text-decoration:none;
