@@ -31,7 +31,7 @@ const HeroPage = styled.div`
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-               url('./assets/welcomePage.png') center/cover no-repeat;
+               url('./assets/images/welcomePage.png') center/cover no-repeat;
     color: aliceblue;
     text-align: center;
     padding: 0 20px;

@@ -124,7 +124,7 @@ const ResumeCard = styled.div`
         font-size: 0.8rem;  
         text-align: justify;
         overflow-wrap: break-word;
-        color:#b1afaf;
+        color:#007bff;
 
     }
 
