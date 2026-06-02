@@ -6,6 +6,7 @@ import WhatIDo from './components/WhatIDo/WhatIDo';
 import Resume from './components/Resume/Resume';
 import MyWork from './components/MyWork';
 import Contact from './components/Contact';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 
@@ -13,17 +14,21 @@ function App() {
   
 
   return (
-    <Page>
-    <SideBar />
-    <PageContent>
-      <Welcome />
-      <AboutMe />
-      <WhatIDo />
-      <Resume />
-      <MyWork />
-      <Contact />
-    </PageContent>
+    <BrowserRouter>
+      <Page>
+        <SideBar />
+        <PageContent>
+          <Routes>
+            <Route path="/" element={<Welcome />}/>
+            <Route path="/about" element={<AboutMe />}/>
+            <Route path="/skills" element={<WhatIDo />}/>
+            <Route path="/resume" element={<Resume />}/>
+            <Route path="/portfolio" element={<MyWork />}/>
+            <Route path="/contact" element={<Contact />}/>
+          </Routes>
+        </PageContent>
     </Page>
+    </BrowserRouter>
   )
 }
 

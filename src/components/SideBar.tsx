@@ -1,4 +1,5 @@
 import styled from  "styled-components";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -9,11 +10,12 @@ const SideBar = () => {
       </Profile>
 
       <Menu>
-        <a href="#about" >About me</a>
-        <a href="#skills" >What I do</a>
-        <a href="#resume" >Resume</a>
-        <a href="#portfolio" >My Work</a>
-        <a href="#contact">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/about" >About me</Link>
+        <Link to="/skills" >What I do</Link>
+        <Link to="/resume" >Resume</Link>
+        <Link to="/portfolio" >My Work</Link>
+        <Link to="/contact">Contact</Link>
       </Menu>
     </NavBarStyle>
   );

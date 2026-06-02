@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const AboutMe = () => {
@@ -9,8 +10,8 @@ const AboutMe = () => {
                 don't you think? I started learning programming during my PhD. I still like chemistry very much,
                 but I love coding more! I work with programming languages and frameworks for Web Development such
                 as JavaScript, React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far... 
-                Checkout <a href='#portfolio'>My Work</a> section to see my projects!</Paragraph>
-            <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
+                Checkout <Link to={"/portfolio"}>My Work</Link> section to see my projects!</Paragraph>
+            <HireMeButton><Link to={"/portfolio"}>My Work</Link></HireMeButton>
         </AboutMeContainer>
      )
 }

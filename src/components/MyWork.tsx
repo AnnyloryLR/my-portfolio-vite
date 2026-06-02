@@ -1,5 +1,6 @@
 import { FaCode} from "react-icons/fa";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const MyWork = () => {
     
@@ -45,7 +46,9 @@ const MyWork = () => {
                 </TallItem>
             </WorkGrid>
             
-             <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
+            <HireMeButton>
+                <Link to='/contact'>Hire Me</Link>
+            </HireMeButton>
         </MyWorkContainer>
      )
 }

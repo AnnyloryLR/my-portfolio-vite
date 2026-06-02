@@ -1,4 +1,5 @@
 import { BiDownload } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Resume = () => {
@@ -54,7 +55,8 @@ const Resume = () => {
                 </DownloadButton>
             
                 <HireMeButton>
-                    <a href='#contact'>Hire Me</a></HireMeButton>
+                    <Link to='/contact'>Hire Me</Link>
+                </HireMeButton>
             </ButtonsContainer>
         </ResumeContainer>
      )

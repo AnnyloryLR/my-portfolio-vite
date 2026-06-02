@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { DiCss3, DiExtjs, DiHtml5, DiJava, DiJavascript1, DiNodejs, DiPython, DiReact, DiMongodb, DiPostgresql } from "react-icons/di";
 import { FaGitAlt, FaGithub, FaDocker, FaDatabase } from "react-icons/fa";
@@ -44,7 +45,9 @@ const WhatIDo = () => {
                
             </GridContainer>
             
-            <HireMeButton><a href='#contact'>Hire Me</a></HireMeButton>
+            <HireMeButton>
+                <Link to='/contact'>Hire Me</Link>
+            </HireMeButton>
         </WhatIDoContainer>
     )
 }
