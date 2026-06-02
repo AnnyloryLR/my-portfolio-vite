@@ -1,6 +1,7 @@
+import styled, { keyframes } from "styled-components";
+import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import { BiDownload } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 const Resume = () => {
     
@@ -57,6 +58,7 @@ const Resume = () => {
                 <HireMeButton>
                     <Link to='/contact'>Hire Me</Link>
                 </HireMeButton>
+                <Link to={"/portfolio"}><ScrollArrow/></Link>
             </ButtonsContainer>
         </ResumeContainer>
      )
@@ -201,3 +203,22 @@ const HireMeButton = styled.button`
         transition: color 0.3s ease;
     }
 `
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+`;
+
+const ScrollArrow = styled(RiArrowDownDoubleLine)`
+  font-size:37px;
+  position:absolute;
+  top: 93vh;
+  left: 49%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: ${bounce} 2s infinite;
+  color:#ffffff;
+  &:hover {
+    border-top-color: #007bff; 
+  }
+`;

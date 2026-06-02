@@ -1,6 +1,7 @@
 import React from 'react';
+import styled, { keyframes } from "styled-components";
+import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import { Link } from 'react-router-dom';
-import styled from "styled-components";
 import { DiCss3, DiExtjs, DiHtml5, DiJava, DiJavascript1, DiNodejs, DiPython, DiReact, DiMongodb, DiPostgresql } from "react-icons/di";
 import { FaGitAlt, FaGithub, FaDocker, FaDatabase } from "react-icons/fa";
 import { BiSolidFileJson } from "react-icons/bi";
@@ -48,6 +49,7 @@ const WhatIDo = () => {
             <HireMeButton>
                 <Link to='/contact'>Hire Me</Link>
             </HireMeButton>
+            <Link to={"/resume"}><ScrollArrow/></Link>
         </WhatIDoContainer>
     )
 }
@@ -91,7 +93,7 @@ const Container = styled.div`
     }
 `
 const HireMeButton = styled.button`
-    margin-top: 70px;
+    margin-top: 30px;
     width:150px;
     height: 40px;
     background-color:#111418;
@@ -113,3 +115,22 @@ const HireMeButton = styled.button`
         transition: color 0.3s ease;
     }
 `
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+`;
+
+const ScrollArrow = styled(RiArrowDownDoubleLine)`
+  font-size:37px;
+  position:absolute;
+  top: 93vh;
+  left: 49%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: ${bounce} 2s infinite;
+  color:#ffffff;
+  &:hover {
+    border-top-color: #007bff; 
+  }
+`;
