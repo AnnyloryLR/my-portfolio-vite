@@ -13,7 +13,7 @@ const AboutMe = () => {
                 as JavaScript, React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far... 
                 Checkout <Link to={"/portfolio"}>My Work</Link> section to see my projects!</Paragraph>
             <HireMeButton><Link to={"/portfolio"}>My Work</Link></HireMeButton>
-             <Link to={"/about"}><ScrollArrow/></Link>
+             <Link to={"/skills"}><ScrollArrow/></Link>
         </AboutMeContainer>
      )
 }
