@@ -1,13 +1,9 @@
 import styled, { keyframes } from "styled-components";
 import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 const Welcome = () => {
-    // const handleScrollDown = () => {
-    //     window.scrollTo({
-    //         top: window.innerHeight,
-    //         behavior:'smooth'
-    //     }) 
-    // }
+
     return (
         <HeroPage>                
             <Title> Welcome! </Title>
@@ -16,7 +12,8 @@ const Welcome = () => {
                         { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                         autoStart: true, loop: true }} /> 
                 </WelcomeText>
-                {/* <ScrollArrow onClick={handleScrollDown}/> */}
+
+                <Link to={"/about"}><ScrollArrow/></Link>
         </HeroPage>
         
      )
