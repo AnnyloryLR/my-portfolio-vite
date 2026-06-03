@@ -2,6 +2,9 @@ import styled, { keyframes } from "styled-components";
 import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import { FaGithub} from "react-icons/fa";
 import { Link } from "react-router-dom";
+import trackItvideo from "../assets/trackIt.mp4";
+import parrotsVideo from "../assets/parrotsGame.mp4";
+import cineflexVideo from "../assets/cineflex.mp4";
 
 const MyWork = () => {
     
@@ -17,7 +20,7 @@ const MyWork = () => {
                 </ShortItem>
                     
                 <TallItem>
-                    <video src={"dist/assets/trackIt.mp4"} controls></video>
+                    <video src={trackItvideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
                         <FaGithub color={'#006ff7'} size={30}/>
                     </a>           
@@ -31,7 +34,7 @@ const MyWork = () => {
                 </ShortItem>
 
                 <WideItem>
-                    <video src={"dist/assets/parrotsGame.mp4"} controls></video>
+                    <video src={parrotsVideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
                         <FaGithub color={'#006ff7'} size={80}/>
                     </a> 
@@ -39,7 +42,7 @@ const MyWork = () => {
                 </WideItem>
 
                 <TallItem>
-                    <video src={"dist/assets/cineflex.mp4"} controls></video>
+                    <video src={cineflexVideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/cineflex">
                         <FaGithub color={'#006ff7'} size={30}/>
                     </a> 

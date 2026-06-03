@@ -49,7 +49,7 @@ const Resume = () => {
             </GeneralContainer>
             <ButtonsContainer>
                 <DownloadButton>
-                    <a href='dist/assets/rosa_annylory-lima_eng.pdf' download>
+                    <a href='src/assets/rosa_annylory-lima_eng.pdf' download>
                     <BiDownload size={20} />
                         Download CV
                     </a>

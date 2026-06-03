@@ -1,11 +1,12 @@
 import styled from  "styled-components";
 import { Link } from "react-router-dom";
+import cvPicture from "../assets/cv_image.png";
 
 const SideBar = () => {
   return (
     <NavBarStyle>
       <Profile>
-        <img id="cvPicture" src="dist/assets/cv_image.png" />
+        <img id="cvPicture" src={cvPicture} />
         <Link to="/about" >Annylory Rosa</Link>
       </Profile>
 

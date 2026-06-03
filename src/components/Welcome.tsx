@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
+import welcomePicture from "../assets/welcomePage.png"
 const Welcome = () => {
 
     return (
@@ -28,7 +29,7 @@ const HeroPage = styled.div`
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-               url('dist/assets/welcomePage.png') center/cover no-repeat;
+               url(${welcomePicture}) center/cover no-repeat;
     color: aliceblue;
     text-align: center;
     padding: 0 20px;
