@@ -6,7 +6,44 @@ const Contact = () => {
         return (
         <ContactContainer>
         <Title>Contact Me</Title>
-        <Paragraph>Feel free to reach out to me using the form below or through my email: annyloryros@gmail.com</Paragraph>
+        <Paragraph>Feel free to reach me out using the form below or through my email: annyloryrosa@gmail.com</Paragraph>
+        <Wrapper>
+                {/* <form onSubmit={}> */}
+                    <Form>
+                        <label htmlFor="user_name">Name</label>
+                        <Information
+                        id ="user_name"
+                        required
+                        type="text"
+                        placeholder="Type your Name..."
+                        // value={}
+                        // onChange={}
+                        />
+
+                        <label htmlFor="email">E-mail</label>
+                        <Information
+                        id ="email"
+                        required
+                        type="email"
+                        placeholder="Type your E-mail adress..."
+                        // value={}
+                        // onChange={}
+                        />
+
+                        <label htmlFor="whatsapp">What's app</label>
+                        <Information
+                        id ="whatsapp"
+                        required
+                        type="text"
+                        placeholder="Type your What's App number..."
+                        // value={}
+                        // onChange={}
+                        />
+                        <Submition type="submit" value="Submit" />
+
+                    </Form>
+                {/* </form> */}
+            </Wrapper>
 
         </ContactContainer>
      )
@@ -19,343 +56,74 @@ const ContactContainer = styled.div`
   width: 85%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `
 
 const Title = styled.h1`
-  margin-bottom: 100px;
+  margin-top:120px;
+  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  
   font-size: clamp(1rem, 5vw, 4rem);
     
 `
 const Paragraph = styled.p`
   font-size: clamp(1rem, 5vw, 1.5rem);
   line-height: 2;
-  text-align: justify;
+  text-align: center;
   max-width: 800px;
-  margin: 0 auto;
-  color: #555;
-  a {
-      color:#555;
-      text-decoration: none;
-      &:hover {
-        color: #007bff;
-      }
-  }
+  color: #007bff;
+`
+const Wrapper = styled.div`
+
+  width:100%;
+  display:flex;
+  flex-direction:column;  
+  justify-content:space-evenly;
+  align-items:center; 
+`
+const Form = styled.div`
+    border:1px solid #555;
+    border-radius:10px;
+    padding:30px;
+    width:50%;
+    display:flex;
+    flex-direction:column;  
+    justify-content:space-evenly;
+    align-items:center;
+
+    label{
+        color:aliceblue;
+        font-size:16px;
+        font-weight:400;
+    }
+`
+const Information = styled.input`
+    width:40%;
+    height:40px;
+    background-color:aliceblue;
+    border:1px solid #D4D4D4;
+    border-radius:8px;
+    margin-bottom:10px;
+    &::placeholder{
+        color:#555;
+        font-size:16px;
+        font-weight:400;
+        font-style:italic;
+    }    
+`
+const Submition = styled.input`
+    width:40%;
+    height:42px;
+    background-color:#555;
+    border:none;
+    border-radius:8px;
+    margin-top:20px;
+    color:aliceblue;
+    font-size:18px;
+    font-weight:700;    
 `
 
 
-
-// interface WorkContact {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   phone: string;
-//   company: string;
-//   jobTitle: string;
-//   department: string;
-//   address: string;
-//   city: string;
-//   state: string;
-//   zipCode: string;
-//   country: string;
-//   message?: string;
-// }
-
-// interface FormErrors {
-//   [key: string]: string;
-// }
-
-// const WorkContactForm: React.FC = () => {
-//   const [formData, setFormData] = useState<WorkContact>({
-//     firstName: '',
-//     lastName: '',
-//     email: '',
-//     phone: '',
-//     company: '',
-//     jobTitle: '',
-//     department: '',
-//     address: '',
-//     city: '',
-//     state: '',
-//     zipCode: '',
-//     country: '',
-//     message: '',
-//   });
-
-//   const [errors, setErrors] = useState<FormErrors>({});
-//   const [submitted, setSubmitted] = useState(false);
-
-//   const validateForm = (): boolean => {
-//     const newErrors: FormErrors = {};
-
-//     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-//     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-//     if (!formData.email.trim()) {
-//       newErrors.email = 'Email is required';
-//     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-//       newErrors.email = 'Email is invalid';
-//     }
-//     if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
-//     if (!formData.company.trim()) newErrors.company = 'Company is required';
-//     if (!formData.jobTitle.trim()) newErrors.jobTitle = 'Job title is required';
-//     if (!formData.city.trim()) newErrors.city = 'City is required';
-//     if (!formData.country.trim()) newErrors.country = 'Country is required';
-
-//     setErrors(newErrors);
-//     return Object.keys(newErrors).length === 0;
-//   };
-
-//   const handleChange = (
-//     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-//   ): void => {
-//     const { name, value } = e.target;
-//     setFormData((prev) => ({
-//       ...prev,
-//       [name]: value,
-//     }));
-//     // Clear error for this field when user starts typing
-//     if (errors[name]) {
-//       setErrors((prev) => ({
-//         ...prev,
-//         [name]: '',
-//       }));
-//     }
-//   };
-
-//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-//     e.preventDefault();
-    
-//     if (validateForm()) {
-//       console.log('Form submitted:', formData);
-//       setSubmitted(true);
-//       // Reset form after submission
-//       setFormData({
-//         firstName: '',
-//         lastName: '',
-//         email: '',
-//         phone: '',
-//         company: '',
-//         jobTitle: '',
-//         department: '',
-//         address: '',
-//         city: '',
-//         state: '',
-//         zipCode: '',
-//         country: '',
-//         message: '',
-//       });
-//       // Hide success message after 3 seconds
-//       setTimeout(() => setSubmitted(false), 3000);
-//     }
-//   };
-
-//   return (
-//     <div className='work-contact-form-container'>
-//       <h2>Work Contact Information</h2>
-      
-//       {submitted && (
-//         <div className='success-message'>
-//           ✓ Form submitted successfully!
-//         </div>
-//       )}
-
-//       <form onSubmit={handleSubmit} className='work-contact-form'>
-//         {/* Personal Information Section */}
-//         <fieldset>
-//           <legend>Personal Information</legend>
-          
-//           <div className='form-row'>
-//             <div className='form-group'>
-//               <label htmlFor='firstName'>First Name *</label>
-//               <input
-//                 type='text'
-//                 id='firstName'
-//                 name='firstName'
-//                 value={formData.firstName}
-//                 onChange={handleChange}
-//                 className={errors.firstName ? 'input-error' : ''}
-//               />
-//               {errors.firstName && <span className='error-text'>{errors.firstName}</span>}
-//             </div>
-
-//             <div className='form-group'>
-//               <label htmlFor='lastName'>Last Name *</label>
-//               <input
-//                 type='text'
-//                 id='lastName'
-//                 name='lastName'
-//                 value={formData.lastName}
-//                 onChange={handleChange}
-//                 className={errors.lastName ? 'input-error' : ''}
-//               />
-//               {errors.lastName && <span className='error-text'>{errors.lastName}</span>}
-//             </div>
-//           </div>
-
-//           <div className='form-row'>
-//             <div className='form-group'>
-//               <label htmlFor='email'>Email *</label>
-//               <input
-//                 type='email'
-//                 id='email'
-//                 name='email'
-//                 value={formData.email}
-//                 onChange={handleChange}
-//                 className={errors.email ? 'input-error' : ''}
-//               />
-//               {errors.email && <span className='error-text'>{errors.email}</span>}
-//             </div>
-
-//             <div className='form-group'>
-//               <label htmlFor='phone'>Phone *</label>
-//               <input
-//                 type='tel'
-//                 id='phone'
-//                 name='phone'
-//                 value={formData.phone}
-//                 onChange={handleChange}
-//                 className={errors.phone ? 'input-error' : ''}
-//               />
-//               {errors.phone && <span className='error-text'>{errors.phone}</span>}
-//             </div>
-//           </div>
-//         </fieldset>
-
-//         {/* Work Information Section */}
-//         <fieldset>
-//           <legend>Work Information</legend>
-          
-//           <div className='form-row'>
-//             <div className='form-group'>
-//               <label htmlFor='company'>Company *</label>
-//               <input
-//                 type='text'
-//                 id='company'
-//                 name='company'
-//                 value={formData.company}
-//                 onChange={handleChange}
-//                 className={errors.company ? 'input-error' : ''}
-//               />
-//               {errors.company && <span className='error-text'>{errors.company}</span>}
-//             </div>
-
-//             <div className='form-group'>
-//               <label htmlFor='jobTitle'>Job Title *</label>
-//               <input
-//                 type='text'
-//                 id='jobTitle'
-//                 name='jobTitle'
-//                 value={formData.jobTitle}
-//                 onChange={handleChange}
-//                 className={errors.jobTitle ? 'input-error' : ''}
-//               />
-//               {errors.jobTitle && <span className='error-text'>{errors.jobTitle}</span>}
-//             </div>
-//           </div>
-
-//           <div className='form-group'>
-//             <label htmlFor='department'>Department</label>
-//             <input
-//               type='text'
-//               id='department'
-//               name='department'
-//               value={formData.department}
-//               onChange={handleChange}
-//             />
-//           </div>
-//         </fieldset>
-
-//         {/* Address Section */}
-//         <fieldset>
-//           <legend>Address</legend>
-          
-//           <div className='form-group'>
-//             <label htmlFor='address'>Street Address</label>
-//             <input
-//               type='text'
-//               id='address'
-//               name='address'
-//               value={formData.address}
-//               onChange={handleChange}
-//             />
-//           </div>
-
-//           <div className='form-row'>
-//             <div className='form-group'>
-//               <label htmlFor='city'>City *</label>
-//               <input
-//                 type='text'
-//                 id='city'
-//                 name='city'
-//                 value={formData.city}
-//                 onChange={handleChange}
-//                 className={errors.city ? 'input-error' : ''}
-//               />
-//               {errors.city && <span className='error-text'>{errors.city}</span>}
-//             </div>
-
-//             <div className='form-group'>
-//               <label htmlFor='state'>State/Province</label>
-//               <input
-//                 type='text'
-//                 id='state'
-//                 name='state'
-//                 value={formData.state}
-//                 onChange={handleChange}
-//               />
-//             </div>
-
-//             <div className='form-group'>
-//               <label htmlFor='zipCode'>Zip/Postal Code</label>
-//               <input
-//                 type='text'
-//                 id='zipCode'
-//                 name='zipCode'
-//                 value={formData.zipCode}
-//                 onChange={handleChange}
-//               />
-//             </div>
-//           </div>
-
-//           <div className='form-group'>
-//             <label htmlFor='country'>Country *</label>
-//             <input
-//               type='text'
-//               id='country'
-//               name='country'
-//               value={formData.country}
-//               onChange={handleChange}
-//               className={errors.country ? 'input-error' : ''}
-//             />
-//             {errors.country && <span className='error-text'>{errors.country}</span>}
-//           </div>
-//         </fieldset>
-
-//         {/* Additional Message */}
-//         <div className='form-group'>
-//           <label htmlFor='message'>Additional Message</label>
-//           <textarea
-//             id='message'
-//             name='message'
-//             value={formData.message}
-//             onChange={handleChange}
-//             rows={5}
-//             placeholder='Add any additional information...'
-//           />
-//         </div>
-
-//         {/* Submit Button */}
-//         <button type='submit' className='submit-btn'>
-//           Submit
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default WorkContactForm;

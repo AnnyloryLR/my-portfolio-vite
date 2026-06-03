@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { RiArrowDownDoubleLine} from 'react-icons/ri'
-import { FaCode} from "react-icons/fa";
+import { FaCode, FaGithub} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const MyWork = () => {
@@ -11,29 +11,29 @@ const MyWork = () => {
             <WorkGrid>
                 <ShortItem>               
                     <img src="https://www.tovima.com/wp-content/uploads/2024/01/22/board-games-scaled.jpg"/>
-                    <a href="">
-                        <FaCode color={'#006ff7'} size={50}/>
+                    <a href="https://github.com/AnnyloryLR/boardcamp_oo">
+                        <FaGithub color={'#006ff7'} size={30}/>
                     </a> 
                 </ShortItem>
                     
                 <TallItem>
                     <video src={"assets/demo/trackIt.mp4"} controls></video>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
-                        <FaCode color={'#006ff7'} size={30}/>
+                        <FaGithub color={'#006ff7'} size={30}/>
                     </a>           
                 </TallItem>
                             
                 <ShortItem>
                     <img src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
                     <a href="https://github.com/AnnyloryLR/driven_recharge">
-                        <FaCode color={'#006ff7'} size={50}/>
+                        <FaGithub color={'#006ff7'} size={30}/>
                     </a>    
                 </ShortItem>
 
                 <WideItem>
                     <video src={"assets/demo/parrotsGame.mp4"} controls></video>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
-                        <FaCode color={'#006ff7'} size={80}/>
+                        <FaGithub color={'#006ff7'} size={80}/>
                     </a> 
                     
                 </WideItem>
@@ -41,7 +41,7 @@ const MyWork = () => {
                 <TallItem>
                     <video src={"./assets/demo/cineflex.mp4"} controls></video>
                     <a href="https://github.com/AnnyloryLR/cineflex">
-                        <FaCode color={'#006ff7'} size={30}/>
+                        <FaGithub color={'#006ff7'} size={30}/>
                     </a> 
                     
                 </TallItem>
