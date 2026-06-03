@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <NavBarStyle>
       <Profile>
-        <img id="cvPicture" src="./assets/images/cv_image.png" alt="cvPicture" />
+        <img id="cvPicture" src="dist/assets/images/cv_image.png" />
         <Link to="/about" >Annylory Rosa</Link>
       </Profile>
 
