@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { RiArrowDownDoubleLine} from 'react-icons/ri'
 import { BiDownload } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import resume from "../../public/rosa_annylory-lima_eng.pdf"
 
 const Resume = () => {
     
@@ -49,7 +50,7 @@ const Resume = () => {
             </GeneralContainer>
             <ButtonsContainer>
                 <DownloadButton>
-                    <a href='src/assets/rosa_annylory-lima_eng.pdf' download>
+                    <a href={resume} download>
                     <BiDownload size={20} />
                         Download CV
                     </a>

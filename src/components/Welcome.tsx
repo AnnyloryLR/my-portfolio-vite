@@ -18,9 +18,7 @@ const Welcome = () => {
         </HeroPage>
         
      )
-        
-            
-       
+              
 }
 
 export default Welcome;
