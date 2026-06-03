@@ -41,14 +41,10 @@ const Profile = styled.div`
   align-items: center;
 
   a{
-    color: aliceblue;
+    color: #0c71ec;
     font-size: 1.1rem;
     text-decoration: none;
     transition: color 0.3s ease;
-    &:hover {
-      color: #0c71ec;
-    }
-  
   }
   img{
     background-color: #d5d2c9;

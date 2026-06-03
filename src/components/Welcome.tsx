@@ -12,7 +12,7 @@ const Welcome = () => {
                         { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                         autoStart: true, loop: true }} /> 
                 </WelcomeText>
-
+                <HireMeButton><Link to={"/contact"}>Hire Me</Link></HireMeButton>
                 <Link to={"/about"}><ScrollArrow/></Link>
         </HeroPage>
         
@@ -34,8 +34,9 @@ const HeroPage = styled.div`
     padding: 0 20px;
 `
 const WelcomeText = styled.h1`
-    margin-top: 300px;
-    font-size:  clamp(1rem, 5vw, 1.8rem);
+    margin-top: 100px;
+    margin-bottom:0px;
+    font-size:  clamp(1rem, 5vw, 3rem);
     font-weight: 500;
     color: aliceblue;
     display: flex;
@@ -44,13 +45,30 @@ const WelcomeText = styled.h1`
     gap: 1rem;
 `
 const Title = styled.p`
-    margin-top:100px;
+    margin-top:280px;
     font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 400;
     color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;            
+`
+const HireMeButton = styled.button`
+    margin-top: 100px;
+    width:150px;
+    height: 40px;
+    background-color:rgba(0, 0, 0, 0.3);
+    border: 2px solid #006ff7;
+    border-radius: 20px;
+    cursor: pointer;
+    a{
+        text-decoration:none;
+        color:#006ff7;
+    }
+        
+       
+        
+       
 `
 const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}

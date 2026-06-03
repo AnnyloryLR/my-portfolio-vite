@@ -7,12 +7,16 @@ const AboutMe = () => {
         return (
         <AboutMeContainer id="about">
             <Title> About Me</Title>
-            <Paragraph> Greetings! I am a Full-Stack Developer with a PhD in Pharmacy, which is rather unconventional, 
-                don't you think? I started learning programming during my PhD. I still like chemistry very much,
-                but I love coding more! I work with programming languages and frameworks for Web Development such
-                as JavaScript, React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far... 
+            <Subtitle>I'm <h3 style={{fontSize:'1.8rem', color:' #007bff', margin:"10px"}}> Annylory Rosa </h3> , a Web Developer </Subtitle>
+            <Paragraph> 
+                I have a PhD in Pharmacy, which is rather unconventional, don't you think? I started learning 
+                programming during my Doctorate. I still like chemistry very much, but I love coding even more!
+            <Paragraph>
+                I work with programming languages and frameworks for Web Development such as JavaScript, 
+                React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far...
+            </Paragraph> 
                 Checkout <Link to={"/portfolio"}>My Work</Link> section to see my projects!</Paragraph>
-            <HireMeButton><Link to={"/portfolio"}>My Work</Link></HireMeButton>
+            <HireMeButton><Link to={"/contact"}>Hire Me</Link></HireMeButton>
              <Link to={"/skills"}><ScrollArrow/></Link>
         </AboutMeContainer>
      )
@@ -23,9 +27,12 @@ export default AboutMe;
 const AboutMeContainer = styled.div`
     min-height: 100vh;
     width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 `
 const Title = styled.h1`
-    margin-bottom: 100px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,12 +40,19 @@ const Title = styled.h1`
     font-size: clamp(1rem, 5vw, 4rem);
     
 `
+const Subtitle = styled.h3`
+    min-width:850px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: clamp(1rem, 5vw, 1.8rem);  
+`
 const Paragraph = styled.p`
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    margin-bottom:30px;
+    max-width:850px;
+    font-size: clamp(1rem, 5vw, 1.2rem);
     line-height: 2;
     text-align: justify;
-    max-width: 800px;
-    margin: 0 auto;
     color: #555;
     a {
         color: #007bff;
@@ -46,7 +60,7 @@ const Paragraph = styled.p`
     }
 `
 const HireMeButton = styled.button`
-    margin-top: 70px;
+    margin-top: 20px;
     width:150px;
     height: 40px;
     background-color: #555;
@@ -77,7 +91,7 @@ const bounce = keyframes`
 const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
-  top: 85vh;
+  top: 90vh;
   left: 49%;
   transform: translateX(-50%);
   cursor: pointer;
