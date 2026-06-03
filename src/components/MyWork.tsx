@@ -17,7 +17,7 @@ const MyWork = () => {
                 </ShortItem>
                     
                 <TallItem>
-                    <video src={"dist/assets/demo/trackIt.mp4"} controls></video>
+                    <video src={"dist/assets/trackIt.mp4"} controls></video>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
                         <FaGithub color={'#006ff7'} size={30}/>
                     </a>           
@@ -31,7 +31,7 @@ const MyWork = () => {
                 </ShortItem>
 
                 <WideItem>
-                    <video src={"dist/assets/demo/parrotsGame.mp4"} controls></video>
+                    <video src={"dist/assets/parrotsGame.mp4"} controls></video>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
                         <FaGithub color={'#006ff7'} size={80}/>
                     </a> 
@@ -39,7 +39,7 @@ const MyWork = () => {
                 </WideItem>
 
                 <TallItem>
-                    <video src={"dist/assets/demo/cineflex.mp4"} controls></video>
+                    <video src={"dist/assets/cineflex.mp4"} controls></video>
                     <a href="https://github.com/AnnyloryLR/cineflex">
                         <FaGithub color={'#006ff7'} size={30}/>
                     </a> 

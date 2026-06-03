@@ -28,7 +28,7 @@ const HeroPage = styled.div`
     min-height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-               url('dist/assets/images/welcomePage.png') center/cover no-repeat;
+               url('dist/assets/welcomePage.png') center/cover no-repeat;
     color: aliceblue;
     text-align: center;
     padding: 0 20px;
@@ -80,7 +80,7 @@ const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
   top: 85vh;
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;
