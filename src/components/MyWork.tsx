@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { RiArrowDownDoubleLine} from 'react-icons/ri'
-import { FaCode, FaGithub} from "react-icons/fa";
+import { FaGithub} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const MyWork = () => {
