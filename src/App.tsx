@@ -54,6 +54,15 @@ const PageContent = styled.div`
   color: #555;
   text-align: center;
   padding: 0 20px;
+  @media (max-width: 900px) {
+    position: relative;
+    top:0;
+    left: 0;
+    border-left: 1px outset #141414;
+    min-height: 100vh;
+    min-width: 100vw;
+    
+  }
    
 `
 

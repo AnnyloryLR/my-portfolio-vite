@@ -25,16 +25,18 @@ export default Welcome;
 
 const HeroPage = styled.div`
     min-height: 100vh;
-    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                url(${welcomePicture}) center/cover no-repeat;
     color: aliceblue;
     text-align: center;
-    padding: 0 20px;
+    padding:0 2%;
 `
 const WelcomeText = styled.h1`
-    margin-top: 100px;
-    margin-bottom:0px;
     font-size:  clamp(1rem, 5vw, 3rem);
     font-weight: 500;
     color: aliceblue;
@@ -44,7 +46,6 @@ const WelcomeText = styled.h1`
     gap: 1rem;
 `
 const Title = styled.p`
-    margin-top:280px;
     font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 400;
     color: aliceblue;
@@ -53,7 +54,9 @@ const Title = styled.p`
     align-items: center;            
 `
 const HireMeButton = styled.button`
-    margin-top: 100px;
+    position:absolute;
+    top: 75vh;
+    left: 40vw;
     width:150px;
     height: 40px;
     background-color:rgba(0, 0, 0, 0.3);
@@ -63,23 +66,20 @@ const HireMeButton = styled.button`
     a{
         text-decoration:none;
         color:#006ff7;
-    }
-        
-       
-        
+    }   
        
 `
 const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
   40% {transform: translateY(-10px);}
   60% {transform: translateY(-5px);}
-`;
+`
 
 const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
   top: 85vh;
-  left: 49%;
+  left: 43vw;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;
@@ -87,5 +87,5 @@ const ScrollArrow = styled(RiArrowDownDoubleLine)`
   &:hover {
     border-top-color: #007bff; 
   }
-`;
+`
 

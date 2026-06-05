@@ -7,7 +7,7 @@ const SideBar = () => {
     <NavBarStyle>
       <Profile>
         <img id="cvPicture" src={cvPicture} />
-        <Link to="/about" >Annylory Rosa</Link>
+        <MyName to="/about" >Annylory Rosa</MyName>
       </Profile>
 
       <Menu>
@@ -28,47 +28,66 @@ const NavBarStyle = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
+  width:12vw;
   height: 100vh;
   background-color: #111418;
-  width:13vw;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 1600px) {
+      width:10vw;
+
+    
+  } 
+  @media (max-width: 900px) {
+      position: relative;
+      display: none;
+
+    
+  }
+
 `
 const Profile = styled.div`
+  width: 100%;
+  height: 30%;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:center;
 
-  a{
-    color: #0c71ec;
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
   img{
+    width: 57%;
+    height: 50%;
     background-color: #d5d2c9;
-    border: 3px solid #343A40;
-    width: 150px;
-    height: 150px;
+    border: 5px solid #343A40;
     border-radius: 50%;
     margin-bottom: 1rem;
     object-fit: contain;
   }
 `
+const MyName = styled(Link)`
+  width: 100%;
+  height: 50%;
+  color: #0c71ec;
+  font-size: 100%;
+  text-decoration: none;
+  text-align:center;
+`
 
 const Menu = styled.div`
-
+  height:40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
-  gap: 1rem;
-  margin-top: 5rem;
+  gap: 3%;
+  margin-top: 5%;
   a{
     color: aliceblue;
-    font-size: 1.1rem;
+    font-size: 100%;
     text-decoration: none;
     transition: color 0.3s ease;
     &:hover {

@@ -60,7 +60,9 @@ const Paragraph = styled.p`
     }
 `
 const HireMeButton = styled.button`
-    margin-top: 20px;
+    position:absolute;
+    top: 83vh;
+    left: 40vw;
     width:150px;
     height: 40px;
     background-color: #555;
@@ -92,7 +94,7 @@ const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
   top: 90vh;
-  left: 49%;
+  left: 43vw;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;

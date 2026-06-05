@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { RiHome7Fill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
     
         return (
         <ContactContainer>
+        <Link to={"/"} ><BackToHome/></Link>
         <Title>Contact Me</Title>
         <Paragraph>Feel free to reach me out using the form below or through my email: annyloryrosa@gmail.com</Paragraph>
         <Wrapper>
@@ -124,5 +127,10 @@ const Submition = styled.input`
     font-size:18px;
     font-weight:700;    
 `
-
+const BackToHome = styled(RiHome7Fill)`
+    margin-top:5vh;
+    margin-left:80vw;
+    color: #007BFF;
+    font-size:36px;
+`
 

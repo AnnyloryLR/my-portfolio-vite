@@ -59,8 +59,9 @@ const Resume = () => {
                 <HireMeButton>
                     <Link to='/contact'>Hire Me</Link>
                 </HireMeButton>
-                <Link to={"/portfolio"}><ScrollArrow/></Link>
+            
             </ButtonsContainer>
+            <Link to={"/portfolio"}><ScrollArrow/></Link>
         </ResumeContainer>
      )
 }
@@ -149,6 +150,9 @@ const Duration = styled.div`
 `
 
 const ButtonsContainer = styled.div`
+    position:absolute;
+    top: 82vh;
+    left: 33.5vw;
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -211,10 +215,10 @@ const bounce = keyframes`
 `;
 
 const ScrollArrow = styled(RiArrowDownDoubleLine)`
-  font-size:37px;
   position:absolute;
-  top: 93vh;
-  left: 49%;
+  top:90vh;
+  left:42vw;
+  font-size:37px;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;

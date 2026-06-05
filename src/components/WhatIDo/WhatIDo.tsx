@@ -93,27 +93,20 @@ const Container = styled.div`
     }
 `
 const HireMeButton = styled.button`
-    margin-top: 30px;
+    position:absolute;
+    top: 85vh;
+    left: 40vw;
     width:150px;
     height: 40px;
-    background-color:#111418;
-    border: 2px solid aliceblue;
+    background-color:rgba(0, 0, 0, 0.3);
+    border: 2px solid #006ff7;
     border-radius: 20px;
     cursor: pointer;
     a{
-        color:aliceblue;
-        font-size: 0.8rem;
         text-decoration:none;
-  
-    }
-    &:hover {
-        a{
-            color:#006ff7;
-        }
-        
-        border: 2px solid #006ff7;
-        transition: color 0.3s ease;
-    }
+        color:#006ff7;
+    }   
+       
 `
 const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -124,8 +117,8 @@ const bounce = keyframes`
 const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
-  top: 93vh;
-  left: 49%;
+  top: 90vh;
+  left: 43vw;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;
