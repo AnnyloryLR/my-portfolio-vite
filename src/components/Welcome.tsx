@@ -35,6 +35,17 @@ const HeroPage = styled.div`
     color: aliceblue;
     text-align: center;
     padding:0 2%;
+    @media (max-width: 900px) {
+     position: absolute;
+     top:0;
+     left: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     min-width: 100vw;
+    
+  }
 `
 const WelcomeText = styled.h1`
     font-size:  clamp(1rem, 5vw, 3rem);
@@ -56,9 +67,9 @@ const Title = styled.p`
 const HireMeButton = styled.button`
     position:absolute;
     top: 75vh;
-    left: 40vw;
-    width:150px;
-    height: 40px;
+    left: 39vw;
+    width:8%;
+    height: 4%;
     background-color:rgba(0, 0, 0, 0.3);
     border: 2px solid #006ff7;
     border-radius: 20px;
@@ -79,7 +90,7 @@ const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
   top: 85vh;
-  left: 43vw;
+  left: 41.5vw;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;

@@ -59,7 +59,6 @@ const Resume = () => {
                 <HireMeButton>
                     <Link to='/contact'>Hire Me</Link>
                 </HireMeButton>
-            
             </ButtonsContainer>
             <Link to={"/portfolio"}><ScrollArrow/></Link>
         </ResumeContainer>
@@ -73,7 +72,8 @@ const ResumeContainer = styled.div`
     width: 100%;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    justify-items:center;
+    align-items: center;
     
 `
 const PageTitle = styled.h1`
@@ -84,6 +84,7 @@ const PageTitle = styled.h1`
     font-size: clamp(1rem, 5vw, 4rem);
 `
 const GeneralContainer = styled.div`
+    border:1px solid violet;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -112,18 +113,19 @@ const Container2 = styled.div`
     }   
 `
 const ResumeCard = styled.div`
-    margin: 10px;
+    max-width:80%;
+    max-height:30%;
     padding: 10px;
     width:500px;
     display:flex;
     flex-direction:column;
+    justify-content: space-evenly;
     border-radius:10px;
     background-color:#555555;
     h6{
-        margin:10px;
-        padding: 10px;
+        margin:0;
         font-size: 1.25rem;
-        text-align: center;
+        text-align: justify;
         color:#ffffff;
     }
     p{
@@ -150,10 +152,9 @@ const Duration = styled.div`
 `
 
 const ButtonsContainer = styled.div`
-    position:absolute;
-    top: 82vh;
-    left: 33.5vw;
-    padding: 20px;
+    border:1px solid violet;
+    width:80%;
+    height:20%;
     display: flex;
     flex-direction: row;
     justify-content: center;    
@@ -161,8 +162,8 @@ const ButtonsContainer = styled.div`
     gap: 20px;
 `
 const DownloadButton = styled.button`
-    width:150px;
-    height: 40px;
+    width:12%;
+    height: 40%;
     background-color:#111418;
     border: 2px solid aliceblue;
     border-radius: 20px;
@@ -187,8 +188,8 @@ const DownloadButton = styled.button`
     }
 `
 const HireMeButton = styled.button`
-    width:150px;
-    height: 40px;
+    width:8%;
+    height: 4%;
     background-color:#111418;
     border: 2px solid aliceblue;
     border-radius: 20px;

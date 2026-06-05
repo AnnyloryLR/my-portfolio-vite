@@ -55,9 +55,13 @@ const PageContent = styled.div`
   text-align: center;
   padding: 0 20px;
   @media (max-width: 900px) {
-    position: relative;
+    position: absolute;
     top:0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-left: 1px outset #141414;
     min-height: 100vh;
     min-width: 100vw;

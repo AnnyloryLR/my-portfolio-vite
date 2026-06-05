@@ -93,11 +93,11 @@ const Container = styled.div`
     }
 `
 const HireMeButton = styled.button`
-    position:absolute;
+ position:absolute;
     top: 85vh;
-    left: 40vw;
-    width:150px;
-    height: 40px;
+    left: 39.5vw;
+    width:8%;
+    height: 4%;
     background-color:rgba(0, 0, 0, 0.3);
     border: 2px solid #006ff7;
     border-radius: 20px;
@@ -118,7 +118,7 @@ const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
   position:absolute;
   top: 90vh;
-  left: 43vw;
+  left: 42vw;
   transform: translateX(-50%);
   cursor: pointer;
   animation: ${bounce} 2s infinite;
