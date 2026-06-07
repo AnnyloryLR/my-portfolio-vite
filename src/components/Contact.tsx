@@ -79,7 +79,6 @@ const Paragraph = styled.p`
   color: #007bff;
 `
 const Wrapper = styled.div`
-
   width:100%;
   display:flex;
   flex-direction:column;  
