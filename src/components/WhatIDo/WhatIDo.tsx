@@ -33,7 +33,7 @@ const WhatIDo = () => {
     return (
         <WhatIDoContainer id="what-i-do">
             <Title> What I Do</Title>
-            <GridContainer>
+            <BigContainer>
                 {Object.entries(categories).map(([category, icons]) => (
                     <Container key={category}>
                         <strong>{category}</strong>
@@ -44,12 +44,10 @@ const WhatIDo = () => {
                     </Container>
                 ))}    
                
-            </GridContainer>
+            </BigContainer>
             
-            <HireMeButton>
-                <Link to='/contact'>Hire Me</Link>
-            </HireMeButton>
-            <Link to={"/resume"}><ScrollArrow/></Link>
+            <HireMeButton to='/contact'>Hire Me</HireMeButton>
+            <LinkStyled to={"/resume"}><ScrollArrow/></LinkStyled>
         </WhatIDoContainer>
     )
 }
@@ -57,73 +55,78 @@ const WhatIDo = () => {
 export default WhatIDo;
 
 const WhatIDoContainer = styled.div`
-    height: 100vh;
-    width: 85%;
+    max-height: 100vh;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 `
 
 const Title = styled.h1`
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: clamp(1rem, 5vw, 4rem);
+    margin-top:5%;
+    font-size: clamp(1rem, 5vw, 4rem)
     
 `
-const GridContainer = styled.div`
-    height:60%;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;  
-    margin-bottom: 50px;
+const BigContainer = styled.div`
+    width: 100%;
+    max-height:70vh;
+    display:flex;
+    justify-content:center;
+    @media (max-width:900px){
+        flex-direction:column;
+        overflow-y:auto;
+    }
 
 `
 const Container = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content:center;
+    padding:3%;
    
     strong{
-        min-width:100%;
-        max-height:5%;
-        margin-bottom:20px;
+        width:200px;
+        height:70px;
         color:  #b1afaf;
         font-size: clamp(1rem, 5vw, 1.5rem);
         padding:10px;   
     }
 `
-const HireMeButton = styled.button`
- position:absolute;
-    top: 85vh;
-    left: 39.5vw;
-    width:8%;
-    height: 4%;
+const HireMeButton = styled(Link)`
+    position:absolute;
+    top: 90vh;
+    width:100px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
     background-color:rgba(0, 0, 0, 0.3);
     border: 2px solid #006ff7;
     border-radius: 20px;
-    cursor: pointer;
-    a{
-        text-decoration:none;
-        color:#006ff7;
-    }   
-       
+    text-decoration:none;
+    color:#006ff7;
+    font-size:1rem;       
+`
+const LinkStyled = styled(Link)`
+  position:absolute;
+  top: 95vh;
+  width:8%;
+  height: 4%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
 `
 const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
   40% {transform: translateY(-10px);}
   60% {transform: translateY(-5px);}
-`;
+`
 
 const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
-  position:absolute;
-  top: 90vh;
-  left: 42vw;
   transform: translateX(-50%);
-  cursor: pointer;
   animation: ${bounce} 2s infinite;
   color:#ffffff;
-  &:hover {
-    border-top-color: #007bff; 
-  }
-`;
+`

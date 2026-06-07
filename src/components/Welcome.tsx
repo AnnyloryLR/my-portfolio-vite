@@ -13,8 +13,8 @@ const Welcome = () => {
                         { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                         autoStart: true, loop: true }} /> 
                 </WelcomeText>
-                <HireMeButton><Link to={"/contact"}>Hire Me</Link></HireMeButton>
-                <Link to={"/about"}><ScrollArrow/></Link>
+                <HireMeButton to={"/contact"}>Hire Me</HireMeButton>
+                <LinkStyled to={"/about"}><ScrollArrow/></LinkStyled>
         </HeroPage>
         
      )
@@ -24,61 +24,63 @@ const Welcome = () => {
 export default Welcome;
 
 const HeroPage = styled.div`
-    min-height: 100vh;
-    min-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items:center;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-               url(${welcomePicture}) center/cover no-repeat;
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${welcomePicture});
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
     color: aliceblue;
     text-align: center;
-    padding:0 2%;
     @media (max-width: 900px) {
-     position: absolute;
-     top:0;
-     left: 0;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     min-height: 100vh;
-     min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        text-align: center;
+        min-height: 100vh;
+        min-width: 100vw;
     
   }
 `
 const WelcomeText = styled.h1`
+    padding:2%;
     font-size:  clamp(1rem, 5vw, 3rem);
     font-weight: 500;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
 `
 const Title = styled.p`
+    padding:2%;
     font-size: clamp(1rem, 5vw, 2rem);
-    font-weight: 400;
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;            
+    font-weight: 400;       
 `
-const HireMeButton = styled.button`
+const HireMeButton = styled(Link)`
     position:absolute;
     top: 75vh;
-    left: 39vw;
-    width:8%;
-    height: 4%;
+    width:100px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
     background-color:rgba(0, 0, 0, 0.3);
     border: 2px solid #006ff7;
     border-radius: 20px;
-    cursor: pointer;
-    a{
-        text-decoration:none;
-        color:#006ff7;
-    }   
-       
+    text-decoration:none;
+    color:#006ff7;
+    font-size:1rem;       
+`
+const LinkStyled = styled(Link)`
+  position:absolute;
+  top: 85vh;
+  width:8%;
+  height: 4%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
 `
 const bounce = keyframes`
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -88,15 +90,8 @@ const bounce = keyframes`
 
 const ScrollArrow = styled(RiArrowDownDoubleLine)`
   font-size:37px;
-  position:absolute;
-  top: 85vh;
-  left: 41.5vw;
   transform: translateX(-50%);
-  cursor: pointer;
   animation: ${bounce} 2s infinite;
   color:#ffffff;
-  &:hover {
-    border-top-color: #007bff; 
-  }
 `
 

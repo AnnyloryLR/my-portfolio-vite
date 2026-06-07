@@ -35,17 +35,14 @@ function App() {
 export default App
 
 const Page = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;  
   background-color:#111418;
 `
 const PageContent = styled.div`
-  position: relative;
-  top:0;
-  left: 13vw;
-  border-left: 1px outset #141414;
-  min-height: 100vh;
-  min-width: 84vw;
+  height: 100%;
+  width: 88vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,9 +50,10 @@ const PageContent = styled.div`
   background-color:#111418;
   color: #555;
   text-align: center;
-  padding: 0 20px;
   @media (max-width: 900px) {
-    position: absolute;
+    min-height: 100vh;
+    min-width:100vw;
+    position: relative;
     top:0;
     left: 0;
     display: flex;
@@ -65,6 +63,7 @@ const PageContent = styled.div`
     border-left: 1px outset #141414;
     min-height: 100vh;
     min-width: 100vw;
+    border:none;
     
   }
    

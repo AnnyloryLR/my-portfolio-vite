@@ -25,9 +25,10 @@ const SideBar = () => {
 export default SideBar;
 
 const NavBarStyle = styled.nav`
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
+  border-right: 1px inset #141414;
   width:12vw;
   height: 100vh;
   background-color: #111418;
