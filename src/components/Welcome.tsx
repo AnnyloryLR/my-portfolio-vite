@@ -1,8 +1,8 @@
-import styled, { keyframes } from "styled-components";
-import { RiArrowDownDoubleLine} from 'react-icons/ri'
+import styled from "styled-components";
 import Typewriter from "typewriter-effect";
-import { Link } from "react-router-dom";
 import welcomePicture from "../assets/welcomePage.png"
+import HireMeButton from "./HireMeButton";
+import ArrowDownDouble from "./ArrowDownDouble";
 const Welcome = () => {
 
     return (
@@ -13,8 +13,9 @@ const Welcome = () => {
                         { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                         autoStart: true, loop: true }} /> 
                 </WelcomeText>
-                <HireMeButton to={"/contact"}>Hire Me</HireMeButton>
-                <LinkStyled to={"/about"}><ScrollArrow/></LinkStyled>
+                <HireMeButton/>
+                <ArrowDownDouble path="/about"></ArrowDownDouble>
+                
         </HeroPage>
         
      )
@@ -56,42 +57,5 @@ const Title = styled.p`
     padding:2%;
     font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 400;       
-`
-const HireMeButton = styled(Link)`
-    position:absolute;
-    top: 75vh;
-    width:100px;
-    height:30px;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    background-color:rgba(0, 0, 0, 0.3);
-    border: 2px solid #006ff7;
-    border-radius: 20px;
-    text-decoration:none;
-    color:#006ff7;
-    font-size:1rem;       
-`
-const LinkStyled = styled(Link)`
-  position:absolute;
-  top: 85vh;
-  width:8%;
-  height: 4%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-`
-const bounce = keyframes`
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
-`
-
-const ScrollArrow = styled(RiArrowDownDoubleLine)`
-  font-size:37px;
-  transform: translateX(-50%);
-  animation: ${bounce} 2s infinite;
-  color:#ffffff;
-`
+`     
 

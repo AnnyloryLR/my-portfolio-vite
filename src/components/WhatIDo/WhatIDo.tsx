@@ -1,15 +1,15 @@
 import React from 'react';
-import styled, { keyframes } from "styled-components";
-import { RiArrowDownDoubleLine} from 'react-icons/ri'
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
 import { DiCss3, DiExtjs, DiHtml5, DiJava, DiJavascript1, DiNodejs, DiPython, DiReact, DiMongodb, DiPostgresql } from "react-icons/di";
 import { FaGitAlt, FaGithub, FaDocker, FaDatabase } from "react-icons/fa";
 import { BiSolidFileJson } from "react-icons/bi";
 import { AiFillApi } from "react-icons/ai";
 import Skill from "./Skill";
+import HireMeButton from '../HireMeButton';
 import { PiInfinity } from 'react-icons/pi';
 import { SiPrisma, SiNginx } from "react-icons/si";
 import { TbBrandAuth0 } from 'react-icons/tb';
+import ArrowDownDouble from '../ArrowDownDouble';
 
 type SkillIcon = React.ReactElement<{className?: string}>;
 
@@ -45,9 +45,8 @@ const WhatIDo = () => {
                 ))}    
                
             </BigContainer>
-            
-            <HireMeButton to='/contact'>Hire Me</HireMeButton>
-            <LinkStyled to={"/resume"}><ScrollArrow/></LinkStyled>
+            <HireMeButton/>
+            <ArrowDownDouble path="/resume" />
         </WhatIDoContainer>
     )
 }
@@ -82,7 +81,7 @@ const Title = styled.h1`
 `
 const BigContainer = styled.div`
     width: 80%;
-    max-height:80vh;
+    max-height:70vh;
     display: flex;
     justify-content: center;
     overflow-x: auto;
@@ -107,41 +106,4 @@ const Container = styled.div`
         font-size: clamp(1rem, 5vw, 1.5rem);
         padding:10px;   
     }
-`
-const HireMeButton = styled(Link)`
-    position:absolute;
-    top: 90vh;
-    width:100px;
-    height:30px;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    background-color:rgba(0, 0, 0, 0.3);
-    border: 2px solid #006ff7;
-    border-radius: 20px;
-    text-decoration:none;
-    color:#006ff7;
-    font-size:1rem;       
-`
-const LinkStyled = styled(Link)`
-  position:absolute;
-  top: 95vh;
-  width:8%;
-  height: 4%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-`
-const bounce = keyframes`
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
-`
-
-const ScrollArrow = styled(RiArrowDownDoubleLine)`
-  font-size:37px;
-  transform: translateX(-50%);
-  animation: ${bounce} 2s infinite;
-  color:#ffffff;
 `

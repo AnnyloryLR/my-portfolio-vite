@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
-
 function App() {
   
 

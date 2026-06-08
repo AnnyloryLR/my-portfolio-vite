@@ -1,6 +1,7 @@
+import styled from "styled-components";
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import { RiArrowDownDoubleLine} from 'react-icons/ri' 
+import HireMeButton from "./HireMeButton";
+import ArrowDownDouble from "./ArrowDownDouble";
 
 const AboutMe = () => {
     
@@ -24,9 +25,8 @@ const AboutMe = () => {
                 I've implemented more than 20 systems, so far... Checkout
                 <Link to={"/portfolio"} style={{display:'contents'}}> MyWork </Link>section to see my projects!
             </Paragraph>
-
-            <HireMeButton to={"/contact"}>Hire Me</HireMeButton>
-            <LinkStyled to={"/skills"}><ScrollArrow/></LinkStyled>
+            <HireMeButton/>
+            <ArrowDownDouble path="/skills"/>
         </AboutMeContainer>
      )
 }
@@ -93,40 +93,4 @@ const Paragraph = styled.p`
         text-align:justify;
     }
 `
-const HireMeButton = styled(Link)`
-    position:absolute;
-    top: 80vh;
-    width:100px;
-    height:30px;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    background-color:rgba(0, 0, 0, 0.3);
-    border: 2px solid #006ff7;
-    border-radius: 20px;
-    text-decoration:none;
-    color:#006ff7;
-    font-size:1rem;       
-`
-const LinkStyled = styled(Link)`
-  position:absolute;
-  top: 90vh;
-  width:8%;
-  height: 4%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 
-`
-const bounce = keyframes`
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
-`
-
-const ScrollArrow = styled(RiArrowDownDoubleLine)`
-  font-size:37px;
-  transform: translateX(-50%);
-  animation: ${bounce} 2s infinite;
-  color:#ffffff;
-`

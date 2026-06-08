@@ -1,10 +1,10 @@
-import styled, { keyframes } from "styled-components";
-import { RiArrowDownDoubleLine} from 'react-icons/ri'
+import styled from "styled-components";
 import { FaGithub} from "react-icons/fa";
-import { Link } from "react-router-dom";
 import trackItvideo from "../assets/trackIt.mp4";
 import parrotsVideo from "../assets/parrotsGame.mp4";
 import cineflexVideo from "../assets/cineflex.mp4";
+import HireMeButton from "./HireMeButton";
+import ArrowDownDouble from "./ArrowDownDouble";
 
 const MyWork = () => {
     
@@ -16,6 +16,7 @@ const MyWork = () => {
                     <img src="https://www.tovima.com/wp-content/uploads/2024/01/22/board-games-scaled.jpg"/>
                     <a href="https://github.com/AnnyloryLR/boardcamp_oo">
                         <FaGithub color={'#006ff7'} size={30}/>
+                        code
                     </a> 
                 </ShortItem>
                     
@@ -23,6 +24,7 @@ const MyWork = () => {
                     <video src={trackItvideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
                         <FaGithub color={'#006ff7'} size={30}/>
+                        code
                     </a>           
                 </TallItem>
                             
@@ -30,6 +32,7 @@ const MyWork = () => {
                     <img src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
                     <a href="https://github.com/AnnyloryLR/driven_recharge">
                         <FaGithub color={'#006ff7'} size={30}/>
+                        code
                     </a>    
                 </ShortItem>
 
@@ -37,6 +40,7 @@ const MyWork = () => {
                     <video src={parrotsVideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
                         <FaGithub color={'#006ff7'} size={30}/>
+                        code
                     </a> 
                     
                 </WideItem>
@@ -45,13 +49,14 @@ const MyWork = () => {
                     <video src={cineflexVideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/cineflex">
                         <FaGithub color={'#006ff7'} size={30}/>
+                        code
                     </a> 
                     
                 </TallItem>
             </WorkGrid>
-            
-            <HireMeButton to='/contact'>Hire Me</HireMeButton>
-            <LinkStyled to={"/contact"}><ScrollArrow/></LinkStyled>
+            <HireMeButton/>
+            <ArrowDownDouble path="/contact"/>
+
         </MyWorkContainer>
      )
 }
@@ -67,6 +72,7 @@ const MyWorkContainer = styled.div`
     ::-webkit-scrollbar{
         display:none;
     }
+
 `
 
 
@@ -81,7 +87,7 @@ const Title = styled.h1`
 `
 
 const WorkGrid = styled.div`
-    height: 70vh;
+    height: 80vh;
     width: 70%;
     border-top:1px groove #006ff7;
     border-radius:10px;
@@ -94,8 +100,9 @@ const WorkGrid = styled.div`
     gap:2%; 
     overflow-y:auto; 
     overflow-x:auto;
-    @media (max-width:1300px){
-        display:unset;
+    @media (max-width:900px){
+        display:flex;
+        flex-direction:column;
 
     }
 `
@@ -166,41 +173,4 @@ const WideItem = styled.div`
         justify-content:center;
     }
 
-`
-const HireMeButton = styled(Link)`
-    position:absolute;
-    top: 90vh;
-    width:100px;
-    height:30px;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    background-color:rgba(0, 0, 0, 0.3);
-    border: 2px solid #006ff7;
-    border-radius: 20px;
-    text-decoration:none;
-    color:#006ff7;
-    font-size:1rem;       
-`
-const LinkStyled = styled(Link)`
-  position:absolute;
-  top: 95vh;
-  width:8%;
-  height: 4%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-`
-const bounce = keyframes`
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
-`
-
-const ScrollArrow = styled(RiArrowDownDoubleLine)`
-  font-size:37px;
-  transform: translateX(-50%);
-  animation: ${bounce} 2s infinite;
-  color:#ffffff;
 `

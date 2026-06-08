@@ -59,13 +59,13 @@ const Profile = styled.div`
   justify-content:center;
 
   img{
-    width: 57%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     background-color: #d5d2c9;
     border: 5px solid #343A40;
     border-radius: 50%;
     margin-bottom: 1rem;
-    object-fit: contain;
+    object-fit:contain;
   }
 `
 const MyName = styled(Link)`
