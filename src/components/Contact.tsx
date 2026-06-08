@@ -67,6 +67,7 @@ const ContactContainer = styled.div`
 `
 
 const Title = styled.h1`
+  margin:0px;
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -106,9 +107,9 @@ const Form = styled.div`
     flex-direction:column;  
     justify-content:space-evenly;
     align-items:center;
+    margin-bottom:3%;
     @media (max-width:900px){
         width: 90%;
-        margin-bottom:3%;
     }
 
     label{
