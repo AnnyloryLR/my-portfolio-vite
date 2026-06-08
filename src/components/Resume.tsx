@@ -88,7 +88,7 @@ const PageTitle = styled.h1`
 `
 const GeneralContainer = styled.div`
     width:70%;
-    height:75vh
+    height:75vh;
     display: flex;
     flex-direction: row;
     align-items: center;
