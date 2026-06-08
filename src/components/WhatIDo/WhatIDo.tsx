@@ -55,36 +55,51 @@ const WhatIDo = () => {
 export default WhatIDo;
 
 const WhatIDoContainer = styled.div`
-    max-height: 100vh;
+    height: 100%;
     width: 100%;
     display:flex;
     flex-direction:column;
-    align-items:center;
-`
-
-const Title = styled.h1`
-    margin-top:5%;
-    font-size: clamp(1rem, 5vw, 4rem)
-    
-`
-const BigContainer = styled.div`
-    width: 100%;
-    max-height:70vh;
-    display:flex;
-    justify-content:center;
-    @media (max-width:900px){
-        flex-direction:column;
-        overflow-y:auto;
+    align-items: center;
+    justify-content: center;
+    @media (max-width:900px) {
+        overflow-y:scroll;
     }
 
 `
+
+const Title = styled.h1`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(1rem, 5vw, 4rem);
+    @media (max-width:900px) {
+        font-size: 2rem;
+        position:fixed;
+        top:0;
+        left:0;
+    }
+    
+`
+const BigContainer = styled.div`
+    width: 80%;
+    max-height:80vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    @media (max-width:900px) {
+        display: unset;
+    }
+
+
+`
 const Container = styled.div`
+    min-width:200px;
+    min-height:600px;
+    margin:1%;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    padding:3%;
-   
     strong{
         width:200px;
         height:70px;
