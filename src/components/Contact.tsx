@@ -80,6 +80,7 @@ const Title = styled.h1`
 `
 const Paragraph = styled.p`
   margin:0px;
+  width: 60%;
   font-size: clamp(1rem, 5vw, 1.5rem);
   line-height: 2;
   text-align: center;
@@ -105,6 +106,10 @@ const Form = styled.div`
     flex-direction:column;  
     justify-content:space-evenly;
     align-items:center;
+    @media (max-width:900px){
+        width: 90%;
+        margin-bottom:3%;
+    }
 
     label{
         color:aliceblue;
@@ -113,7 +118,7 @@ const Form = styled.div`
     }
 `
 const Information = styled.input`
-    width:40%;
+    width:300px;
     height:40px;
     background-color:aliceblue;
     border:1px solid #D4D4D4;
@@ -127,8 +132,8 @@ const Information = styled.input`
     }    
 `
 const TextareaStyled = styled.textarea`
-    width:40%;
-    height:40px;
+    width:300px;
+    height:200px;
     background-color:aliceblue;
     border:1px solid #D4D4D4;
     border-radius:8px;
@@ -142,7 +147,7 @@ const TextareaStyled = styled.textarea`
     
 `
 const Submition = styled.input`
-    width:40%;
+    width:300px;
     height:42px;
     background-color:#555;
     border:none;
