@@ -36,7 +36,7 @@ const MyWork = () => {
                 <WideItem>
                     <video src={parrotsVideo} controls></video>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
-                        <FaGithub color={'#006ff7'} size={80}/>
+                        <FaGithub color={'#006ff7'} size={30}/>
                     </a> 
                     
                 </WideItem>
@@ -64,6 +64,9 @@ const MyWorkContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    ::-webkit-scrollbar{
+        display:none;
+    }
 `
 
 
@@ -78,15 +81,26 @@ const Title = styled.h1`
 `
 
 const WorkGrid = styled.div`
+    height: 70vh;
+    width: 70%;
     border-top:1px groove #006ff7;
     border-radius:10px;
+    padding:2%;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px; // Base height increment unit
-    gap:45px;  
+    grid-auto-rows: 250px; // Base height increment unit
+    gap:2%; 
+    overflow-y:auto; 
+    overflow-x:auto;
+    @media (max-width:1300px){
+        display:unset;
+
+    }
 `
 const ShortItem = styled.div`
-    margin:20px;
+    margin:2%;
     border-radius:10px;
     display:flex;
     flex-direction: column;
@@ -94,7 +108,7 @@ const ShortItem = styled.div`
     align-items:center;
     width:300px;
     height:250px;
-    background: #555555;
+    background: #964141;
     img{
         margin-top:10px;
         height:180px;
@@ -109,15 +123,15 @@ const ShortItem = styled.div`
  
 `
 const TallItem = styled.div`
-    margin:20px;
+    margin:2%;
     border-radius:10px;
     grid-row: span 2; // Spans 2 row segments (200px + gap)
     display:flex;
     flex-direction: column;
     justify-items:center;
-    width:250px;
-    height:400px;
-    background: #555555;
+    width:300px;
+    height:500px;
+    background: #565b97;
     video{
         margin-top:10px;
         height:350px;
@@ -132,14 +146,15 @@ const TallItem = styled.div`
     
 `
 const WideItem = styled.div`
-    margin-top:150px;
+    margin:2%;
     border-radius:10px;
+    display:grid;
     grid-column: span 2; // Spans 2 columns horizontally
-    display:flex;
     align-items:center;
     justify-content:space-evenly;
     height:250px;
-    background: #555555;
+    width:500px;
+    background: #579799;
     video{
         height:200px;
         width:400px;
@@ -150,6 +165,7 @@ const WideItem = styled.div`
         color: #006ff7;
         justify-content:center;
     }
+
 `
 const HireMeButton = styled(Link)`
     position:absolute;
