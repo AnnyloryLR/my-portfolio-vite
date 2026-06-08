@@ -7,16 +7,22 @@ const AboutMe = () => {
         return (
         <AboutMeContainer id="about">
             <Title> About Me</Title>
-            <Paragraph>
+            <Presentation>
                 <Subtitle>I'm</Subtitle> <MyName>Annylory Rosa,</MyName> <Subtitle>a Web Developer</Subtitle>
-            </Paragraph>
+            </Presentation>
             
             <Paragraph> 
                 I have a PhD in Pharmacy, which is rather unconventional, don't you think? I started learning 
-                programming during my Doctorate. I still like chemistry very much, but I love coding even more!
-                I work with programming languages and frameworks for Web Development such as JavaScript, 
-                React, Node.js, Java and Spring Boot. I've implemented more than 20 systems, so far...
-                Checkout <Link to={"/portfolio"}>My Work</Link> section to see my projects!
+                programming during my Doctorate.
+            </Paragraph>
+            <Paragraph> 
+                I still like chemistry very much, but I love coding even more!
+                I work with programming languages and frameworks for Web Development such as
+                JavaScript,React, Node.js, Java and Spring Boot.
+            </Paragraph> 
+            <Paragraph> 
+                I've implemented more than 20 systems, so far... Checkout
+                <Link to={"/portfolio"} style={{display:'contents'}}> MyWork </Link>section to see my projects!
             </Paragraph>
 
             <HireMeButton to={"/contact"}>Hire Me</HireMeButton>
@@ -36,24 +42,38 @@ const AboutMeContainer = styled.div`
 `
 const Title = styled.h1`
     padding:3%;
-    border-bottom:2%;
-    font-size: clamp(1rem, 5vw, 4rem);
+    font-size: 4rem;
+    @media (max-width:900px) {
+        font-size:2rem;
+    }
     
+`
+const Presentation = styled.div`
+    width: 60%;
+    text-align:left;
+    @media (max-width:900px) {
+        width: 80%;
+        font-size:1rem;
+    }
 `
 const Subtitle = styled.p`
     display:inline;
     font-size: clamp(1rem, 5vw, 1.8rem);  
+    @media (max-width:900px) {
+        font-size:1rem;
+    }
 `
 const MyName = styled.p`
     display:inline;
     color:#007bff;
     font-size: clamp(1rem, 5vw, 1.8rem);  
+    @media (max-width:900px) {
+        font-size:1rem;
+    }
 `
 const Paragraph = styled.p`
-    width:70%;
-    max-height:65%;
-    overflow-y:auto;
-    font-size: clamp(1rem, 5vw, 1rem);
+    width:60%;
+    font-size: clamp(1rem, 5vw, 1.2rem);
     line-height: 2;
     text-align: justify;
     color: #555;
@@ -61,10 +81,21 @@ const Paragraph = styled.p`
         color: #007bff;
         text-decoration: none;
     }
+    @media (max-width:900px) {
+        line-height: 1;
+        font-size:1.2rem;
+        text-align:center;
+    }
+    @media (max-width:700px) {
+        width:80%;
+        line-height: normal;
+        font-size:0.8rem;
+        text-align:justify;
+    }
 `
 const HireMeButton = styled(Link)`
     position:absolute;
-    top: 90vh;
+    top: 80vh;
     width:100px;
     height:30px;
     display:flex;
@@ -79,7 +110,7 @@ const HireMeButton = styled(Link)`
 `
 const LinkStyled = styled(Link)`
   position:absolute;
-  top: 95vh;
+  top: 90vh;
   width:8%;
   height: 4%;
   display:flex;
