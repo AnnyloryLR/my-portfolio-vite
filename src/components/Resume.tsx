@@ -80,18 +80,24 @@ const PageTitle = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     font-size: clamp(1rem, 5vw, 4rem);
+    @media (max-width:1350px){
+        font-size: 2rem;
+    }
 `
 const GeneralContainer = styled.div`
     width:70%;
-    //border:1px solid violet;
     display: flex;
     flex-direction: row;
     align-items: center;
+    @media (max-width:1350px){
+        max-height: 80vh;
+        flex-direction: column;
+        overflow-y: auto;
+    }
 `
 const Container = styled.div`
-    padding:2%;
     width:50%;
     display: flex;
     flex-direction: column;
@@ -100,29 +106,41 @@ const Container = styled.div`
     h2{
         font-size: 2rem;
         text-align: center;
+        @media (max-width:900px) {
+        font-size: 1rem;
+        }
     }   
+    @media (max-width:1050px) {
+        width: 100%;
+        font-size: 1rem;
+    }
 `
 const ResumeCard = styled.div`
-    width:400px;
+    width:90%;
     height:150px;
     padding:1%;
     display:flex;
     flex-direction:column;
     justify-content:center;
     border-radius:10px;
-    background-color:#555555;
+    background-color:rgba(0,0,0,0.8);
     h6{ 
         margin:20px 20px 20px 0;
         font-size: 1.25rem;
         text-align: left;
         line-height: 1;
-        color:#ffffff;
+        @media (max-width:900px) {
+            font-size: 0.8rem;
+        }
     }
     p{
         font-size: 0.8rem;  
         text-align: justify;
-        color:#007bff;
+        color:#0b5099;
         margin:0px;
+        @media (max-width:900px) {
+            font-size: 0.5rem;
+        }
     }
 
 `
@@ -133,7 +151,7 @@ const Duration = styled.div`
     width: 90px;
     height: 30px;
     border-radius: 5px;
-    background-color:#007bff;
+    background-color:#055bb8;
     font-size: 0.7rem;  
     text-align: center;
     overflow-wrap: break-word;
@@ -141,7 +159,8 @@ const Duration = styled.div`
 `
 
 const ButtonsContainer = styled.div`
-    width:80%;
+    margin-top: 1%;
+    width:100%;
     height:4%;
     display: flex;
     flex-direction: row;
@@ -150,7 +169,7 @@ const ButtonsContainer = styled.div`
     gap: 20px;
 `
 const DownloadButton = styled.button`
-    width:10%;
+    width:130px;
     height: 100%;
     background-color:#111418;
     border: 2px solid aliceblue;
@@ -176,7 +195,7 @@ const DownloadButton = styled.button`
     }
 `
 const HireMeButton = styled.button`
-    width:10%;
+    width:130px;
     height: 100%;
     background-color:#111418;
     border: 2px solid aliceblue;
@@ -199,7 +218,7 @@ const HireMeButton = styled.button`
 `
 const LinkStyled = styled(Link)`
   position:absolute;
-  top: 90vh;
+  top: 95vh;
   width:8%;
   height: 4%;
   display:flex;
