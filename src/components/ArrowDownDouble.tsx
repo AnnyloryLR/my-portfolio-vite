@@ -17,7 +17,7 @@ const ArrowDownDouble = ({path}:Path) =>{
 export default ArrowDownDouble
 
 const LinkStyled = styled(Link)`
-  position:absolute;
+  position:fixed;
   top: 95vh;
   width:8%;
   height: 4%;
