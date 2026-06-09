@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import { FaGithub} from "react-icons/fa";
-import trackItvideo from "../assets/trackIt.mp4";
-import parrotsVideo from "../assets/parrotsGame.mp4";
-import cineflexVideo from "../assets/cineflex.mp4";
 import HireMeButton from "./HireMeButton";
 import ArrowDownDouble from "./ArrowDownDouble";
 
@@ -21,7 +18,7 @@ const MyWork = () => {
                 </ShortItem>
                     
                 <TallItem>
-                    <video src={trackItvideo} controls></video>
+                    <iframe src="https://www.youtube.com/embed/GK0-ca5RLpk" ></iframe>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
                         <FaGithub color={'#006ff7'} size={30}/>
                         code
@@ -37,7 +34,7 @@ const MyWork = () => {
                 </ShortItem>
 
                 <WideItem>
-                    <video src={parrotsVideo} controls></video>
+                    <iframe src="https://youtube.com/embed/-MOkgSfN_5U" ></iframe>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
                         <FaGithub color={'#006ff7'} size={30}/>
                         code
@@ -46,7 +43,7 @@ const MyWork = () => {
                 </WideItem>
 
                 <TallItem>
-                    <video src={cineflexVideo} controls></video>
+                    <iframe src="https://www.youtube.com/embed/5Nusg8muZMA" ></iframe>
                     <a href="https://github.com/AnnyloryLR/cineflex">
                         <FaGithub color={'#006ff7'} size={30}/>
                         code
@@ -139,7 +136,7 @@ const TallItem = styled.div`
     width:300px;
     height:500px;
     background: #565b97;
-    video{
+    iframe{
         margin-top:10px;
         height:350px;
     }
@@ -162,7 +159,8 @@ const WideItem = styled.div`
     height:250px;
     width:500px;
     background: #579799;
-    video{
+    iframe{
+        margin-top:10px;
         height:200px;
         width:400px;
     }

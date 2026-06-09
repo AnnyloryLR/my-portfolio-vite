@@ -61,7 +61,7 @@ const WhatIDoContainer = styled.div`
     align-items: center;
     justify-content: center;
     @media (max-width:900px) {
-        overflow-y:scroll;
+        overflow-y:auto;
     }
 
 `
