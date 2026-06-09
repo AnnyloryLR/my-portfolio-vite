@@ -19,7 +19,7 @@ const AboutMe = () => {
             <Paragraph> 
                 I still like chemistry very much, but I love coding even more!
                 I work with programming languages and frameworks for Web Development such as
-                JavaScript,React, Node.js, Java and Spring Boot.
+                JavaScript, React, Node.js, Java and Spring Boot.
             </Paragraph> 
             <Paragraph> 
                 I've implemented more than 20 systems, so far... Checkout
