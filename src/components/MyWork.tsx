@@ -28,7 +28,7 @@ const MyWork = () => {
                             
                 <ShortItem>
                     <a href="https://github.com/AnnyloryLR/driven_recharge">
-                        <img style={{height:"60%"}} src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
+                        <img src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
                         Driven-recharge: API for mobile recharge - Node & Express
                         <StyledIcon/>
                     </a>    
@@ -89,8 +89,8 @@ const Title = styled.h1`
 `
 
 const WorkGrid = styled.div`
-    height: 80vh;
     width: 70%;
+    height: 70vh;
     border-top:3px groove #006ff7;
     border-radius:10px;
     padding:2%;
@@ -101,31 +101,28 @@ const WorkGrid = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 300px; // Base height increment unit
     gap:2%; 
-    overflow-y:auto; 
+    overflow-y:scroll;
     @media (max-width:1000px){
-        padding-top:500px;
         display:flex;
         flex-direction:column;
+        height: 100%;
     }
-    @media (max-width:500px){
-        padding-top:300px;
-        display:flex;
-        flex-direction:column;
-    }
+
 `
 const ShortItem = styled.div`
     margin:2%;
     border-radius:10px;
     display:flex;
     flex-direction: column;
-    justify-items:center;
-    align-items:center;
+    //justify-items:center;
+    //align-items:center;
     width:80%;
     height:100%;
     background-color: #062783;
     img{
         margin:5%;
         width: 80%;
+        height: 60%;
         border-radius:5%;
     }
     a{
