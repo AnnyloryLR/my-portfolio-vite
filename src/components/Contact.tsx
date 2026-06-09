@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+//import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import { RiHome7Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
-    const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID as string
-    const templateId = import.meta.env.VITE_TEMPLATE_ID as string
-    const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY as string
+    //const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID as string
+    //const templateId = import.meta.env.VITE_TEMPLATE_ID as string
+    //const publicKey = import.meta.env.VITE_EMAIL_PUBLIC_KEY as string
         
         const formRef = useRef<HTMLFormElement | null>(null);
 
