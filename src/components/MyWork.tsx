@@ -10,34 +10,36 @@ const MyWork = () => {
             <Title>My Work</Title>           
             <WorkGrid>
                 <ShortItem>               
-                    <img src="https://www.tovima.com/wp-content/uploads/2024/01/22/board-games-scaled.jpg"/>
+                    
                     <a href="https://github.com/AnnyloryLR/boardcamp_oo">
-                        <FaGithub color={'#006ff7'} size={30}/>
-                        code
+                        <img src="https://www.tovima.com/wp-content/uploads/2024/01/22/board-games-scaled.jpg"/>
+                        BoardCamp: API for game rental - JAVA & Spring Boot 
+                        <StyledIcon/>
                     </a> 
                 </ShortItem>
                     
                 <TallItem>
                     <iframe src="https://www.youtube.com/embed/GK0-ca5RLpk" ></iframe>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
-                        <FaGithub color={'#006ff7'} size={30}/>
-                        code
+                        TrackIt: web app for tracking daily activities - React & Vite
+                        <StyledIcon/>
                     </a>           
                 </TallItem>
                             
                 <ShortItem>
-                    <img src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
                     <a href="https://github.com/AnnyloryLR/driven_recharge">
-                        <FaGithub color={'#006ff7'} size={30}/>
-                        code
+                        <img style={{height:"60%"}} src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
+                        Driven-recharge: API for mobile recharge - Node & Express
+                        <StyledIcon/>
                     </a>    
                 </ShortItem>
 
                 <WideItem>
                     <iframe src="https://youtube.com/embed/-MOkgSfN_5U" ></iframe>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
-                        <FaGithub color={'#006ff7'} size={30}/>
-                        code
+                        Parrot Game: Web app to play memo game with parrots - 
+                        HTML5 | CSS3 | JavaScript
+                        <StyledIcon/>
                     </a> 
                     
                 </WideItem>
@@ -45,8 +47,8 @@ const MyWork = () => {
                 <TallItem>
                     <iframe src="https://www.youtube.com/embed/5Nusg8muZMA" ></iframe>
                     <a href="https://github.com/AnnyloryLR/cineflex">
-                        <FaGithub color={'#006ff7'} size={30}/>
-                        code
+                        Cineflex: web app for booking movie tickets - React & Vite
+                        <StyledIcon/>
                     </a> 
                     
                 </TallItem>
@@ -80,27 +82,35 @@ const Title = styled.h1`
     align-items: center;
     padding: 30px;
     font-size: clamp(1rem, 5vw, 4rem);
+    @media (max-width: 900px){
+        font-size:2rem;
+    }
     
 `
 
 const WorkGrid = styled.div`
     height: 80vh;
     width: 70%;
-    border-top:1px groove #006ff7;
+    border-top:3px groove #006ff7;
     border-radius:10px;
     padding:2%;
+    background-color: #000000;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 250px; // Base height increment unit
+    grid-auto-rows: 300px; // Base height increment unit
     gap:2%; 
     overflow-y:auto; 
-    overflow-x:auto;
-    @media (max-width:900px){
+    @media (max-width:1000px){
+        padding-top:500px;
         display:flex;
         flex-direction:column;
-
+    }
+    @media (max-width:500px){
+        padding-top:300px;
+        display:flex;
+        flex-direction:column;
     }
 `
 const ShortItem = styled.div`
@@ -110,19 +120,20 @@ const ShortItem = styled.div`
     flex-direction: column;
     justify-items:center;
     align-items:center;
-    width:300px;
-    height:250px;
-    background: #964141;
+    width:80%;
+    height:100%;
+    background-color: #062783;
     img{
-        margin-top:10px;
-        height:180px;
-        border-radius:30px;
+        margin:5%;
+        width: 80%;
+        border-radius:5%;
     }
     a{
-        padding:10px;
+        font-size:0.8rem;
         text-decoration:none;
-        color: #006ff7;
+        color:#006ff7;
         justify-content:center;
+        align-items: center;
     }
  
 `
@@ -133,15 +144,20 @@ const TallItem = styled.div`
     display:flex;
     flex-direction: column;
     justify-items:center;
-    width:300px;
-    height:500px;
-    background: #565b97;
+    align-items: center;
+    width:70%;
+    height:100%;
+    background-color: #062783;
     iframe{
-        margin-top:10px;
-        height:350px;
+        margin:5%;
+        height:80%;
+        width: 80%;
+        border-style:none;
+        border-radius:5%;
+    
     }
     a{
-        padding:10px;
+        font-size:0.8rem;
         text-decoration:none;
         color: #006ff7;
         justify-content:center;
@@ -155,20 +171,26 @@ const WideItem = styled.div`
     display:grid;
     grid-column: span 2; // Spans 2 columns horizontally
     align-items:center;
-    justify-content:space-evenly;
-    height:250px;
-    width:500px;
-    background: #579799;
+    justify-content:center;
+    height:100%;
+    width:80%;
+    background-color: #062783;
     iframe{
-        margin-top:10px;
-        height:200px;
-        width:400px;
+        margin:5%;
+        height:70%;
+        width: 90%;
+        border-style:none;
+        border-radius:5%;
+
     }
-    a{
-        padding:10px;
+    a{  
+        font-size:0.8rem;
         text-decoration:none;
         color: #006ff7;
-        justify-content:center;
     }
 
+`
+const StyledIcon = styled(FaGithub)`
+    font-size:30px;
+    color: #006ff7;
 `

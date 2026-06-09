@@ -49,7 +49,7 @@ const PageContent = styled.div`
   background-color:#111418;
   color: #555;
   text-align: center;
-  @media (max-width: 900px) {
+  @media (max-width:1000px) {
     min-height: 100vh;
     min-width:100vw;
     position: relative;

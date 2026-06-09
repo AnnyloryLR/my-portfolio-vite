@@ -41,7 +41,7 @@ const NavBarStyle = styled.nav`
 
     
   } 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
       position: relative;
       display: none;
 
@@ -51,7 +51,7 @@ const NavBarStyle = styled.nav`
 `
 const Profile = styled.div`
   width: 100%;
-  height: 30%;
+  height: 25%;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -59,13 +59,13 @@ const Profile = styled.div`
   justify-content:center;
 
   img{
-    width: 55%;
-    height: 60%;
-    background-color: #d5d2c9;
+    width: 50%;
+    height: 50%;
+    background-color: #000000;
     border: 5px solid #343A40;
     border-radius: 50%;
     margin-bottom: 1rem;
-    object-fit:fill;
+    object-fit:contain;
   }
 `
 const MyName = styled(Link)`
