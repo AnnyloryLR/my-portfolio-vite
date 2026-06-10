@@ -113,20 +113,20 @@ const Title = styled.h1`
 const Paragraph = styled.p`
     margin:0px;
     max-height:20%;
-    max-width: 60%;
-    font-size: clamp(1rem, 5vw, 1.5rem);
+    max-width:30%;
+    font-size: clamp(1rem, 5vw, 1rem);
     line-height: 2;
     text-align: center;
-    max-width: 90%;
     color: #007bff;
-    @media (max-width:900px){
-    font-size:0.8rem;
+    @media (max-width:900px){\
+        max-width: 60%;;
+        font-size:0.8rem;
   }
 `
 
 const Form = styled.form`
-    height:70vh;
-    width:50%;
+    height:50vh;
+    width:20%;
     border:1px solid #555;
     border-radius:10px;
     padding:30px;
@@ -137,6 +137,7 @@ const Form = styled.form`
     margin-bottom:3%;
     @media (max-width:900px){
         width: 60%;
+        height:70vh;
     }
 
     label{
