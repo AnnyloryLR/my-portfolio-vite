@@ -54,7 +54,7 @@ const WhatIDo = () => {
 export default WhatIDo;
 
 const WhatIDoContainer = styled.div`
-    //height: 100vh;
+    height: 100vh;
     width: 100%;
     display:flex;
     flex-direction:column;
