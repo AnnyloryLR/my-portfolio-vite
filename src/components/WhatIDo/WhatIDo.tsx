@@ -60,6 +60,9 @@ const WhatIDoContainer = styled.div`
     flex-direction:column;
     align-items: center;
     justify-content: center;
+    ::-webkit-scrollbar{
+        display: none;
+    }
     @media (max-width:900px) {
         overflow-y:auto;
     }
@@ -71,20 +74,18 @@ const Title = styled.h1`
     display: flex;
     justify-content: center;
     font-size: clamp(1rem, 5vw, 4rem);
+    color:#007bff;
     @media (max-width:900px) {
-        font-size: 2rem;
-        position:fixed;
-        top:0;
-        left:0;
+        font-size:2rem;
     }
     
 `
 const BigContainer = styled.div`
     width: 80%;
-    max-height:70vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
-    overflow-x: auto;
+    align-items: center;
     @media (max-width:900px) {
         display: unset;
     }
@@ -92,7 +93,7 @@ const BigContainer = styled.div`
 
 `
 const Container = styled.div`
-    min-width:200px;
+    width:200px;
     min-height:600px;
     margin:1%;
     display:flex;
@@ -100,10 +101,9 @@ const Container = styled.div`
     align-items:center;
     justify-content:center;
     strong{
-        width:200px;
-        height:70px;
+        text-align: center;
         color:  #b1afaf;
         font-size: clamp(1rem, 5vw, 1.5rem);
-        padding:10px;   
+        padding:10px;  
     }
 `

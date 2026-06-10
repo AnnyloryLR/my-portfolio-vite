@@ -82,6 +82,7 @@ const Title = styled.h1`
     align-items: center;
     padding: 30px;
     font-size: clamp(1rem, 5vw, 4rem);
+    color: #006ff7;
     @media (max-width: 900px){
         font-size:2rem;
     }

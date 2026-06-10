@@ -104,6 +104,7 @@ const Title = styled.h1`
     justify-content: center;
     align-items: center;
     font-size: clamp(1rem, 5vw, 4rem);
+    color:#007bff;
     @media (max-width:900px){
         font-size:2rem;
         width: 100%;

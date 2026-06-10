@@ -6,28 +6,37 @@ import WhatIDo from './components/WhatIDo/WhatIDo';
 import Resume from './components/Resume';
 import MyWork from './components/MyWork';
 import Contact from './components/Contact';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, ScrollRestoration, Outlet, RouterProvider } from 'react-router-dom';
 
 
+const RootLayout = () => (
+  <Page>
+    <SideBar/>
+    <ScrollRestoration/>
+    <Outlet/>
+  </Page>
+)
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <RootLayout/>,
+    children:[
+      {path:"", element: <Welcome />},
+      {path:"about", element: <AboutMe />},
+      {path:"skills", element: <WhatIDo />},
+      {path:"resume", element: <Resume />},
+      {path:"portfolio", element: <MyWork />},
+      {path:"contact", element: <Contact />}
+    ]
+ }
+
+])
 function App() {
 
   return (
-    <BrowserRouter>
-      <Page>
-        <SideBar />
-        <PageContent>
-          <Routes>
-            <Route path="/" element={<Welcome />}/>
-            <Route path="/about" element={<AboutMe />}/>
-            <Route path="/skills" element={<WhatIDo />}/>
-            <Route path="/resume" element={<Resume />}/>
-            <Route path="/portfolio" element={<MyWork />}/>
-            <Route path="/contact" element={<Contact />}/>
-          </Routes>
-        </PageContent>
-    </Page>
-    </BrowserRouter>
-  )
+      <RouterProvider router={router}/>
+  );
 }
 
 export default App

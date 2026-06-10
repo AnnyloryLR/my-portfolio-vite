@@ -43,6 +43,7 @@ const AboutMeContainer = styled.div`
 const Title = styled.h1`
     padding:3%;
     font-size: 4rem;
+    color:#007bff;
     @media (max-width:900px) {
         font-size:2rem;
     }
@@ -59,6 +60,7 @@ const Presentation = styled.div`
 const Subtitle = styled.p`
     display:inline;
     font-size: clamp(1rem, 5vw, 1.8rem);  
+    color:#555;
     @media (max-width:900px) {
         font-size:1rem;
     }
