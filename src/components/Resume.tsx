@@ -82,6 +82,7 @@ const PageTitle = styled.h1`
     align-items: center;
     padding: 20px 20px 0 20px;
     font-size: clamp(1rem, 5vw, 4rem);
+    color:#007BFF;
     @media (max-width:1350px){
         font-size: 2rem;
     }
@@ -129,6 +130,7 @@ const ResumeCard = styled.div`
         margin:20px 20px 20px 0;
         font-size: 1.25rem;
         text-align: left;
+        color:#007BFF;
         line-height: 1;
         @media (max-width:900px) {
             font-size: 0.8rem;
