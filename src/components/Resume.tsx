@@ -68,7 +68,7 @@ const Resume = () => {
 export default Resume;
 
 const ResumeContainer = styled.div`
-    height: 100vh;
+    //height: 100vh;
     width: 100%;
     display:flex;
     flex-direction:column;
