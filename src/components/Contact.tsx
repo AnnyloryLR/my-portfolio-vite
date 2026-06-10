@@ -118,10 +118,10 @@ const Paragraph = styled.p`
     line-height: 2;
     text-align: center;
     color: #007bff;
-    @media (max-width:900px){\
+    @media (max-width:900px){
         max-width: 60%;;
         font-size:0.8rem;
-  }
+    }
 `
 
 const Form = styled.form`
