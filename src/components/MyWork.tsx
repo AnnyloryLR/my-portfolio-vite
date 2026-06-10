@@ -91,7 +91,7 @@ const Title = styled.h1`
 
 const WorkGrid = styled.div`
     width: 70%;
-    height: 70vh;
+    height: 65vh;
     border-top:3px groove #006ff7;
     border-radius:10px;
     padding:2%;
@@ -106,7 +106,9 @@ const WorkGrid = styled.div`
     @media (max-width:1000px){
         display:flex;
         flex-direction:column;
-        height: 100%;
+        height: 65vh;
+        overflow-y: auto;
+        justify-content: flex-start;
     }
 
 `
@@ -120,6 +122,7 @@ const ShortItem = styled.div`
   
     background-color: #062783;
     img{
+        margin-top: 2%;
         width: 60%;
         height: 60%;
         border-radius:5%;

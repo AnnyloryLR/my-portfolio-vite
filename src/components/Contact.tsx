@@ -11,10 +11,6 @@ const Contact = () => {
     
     const formRef = useRef<HTMLFormElement>(null);
 
-
-
-    
-
         const sendEmail = (event: React.ChangeEvent<HTMLFormElement>) => {
             event.preventDefault();
 
@@ -77,6 +73,7 @@ const Contact = () => {
                         
                         />
                         <Submition type="submit" value="Send" />
+                        
 
                     </Form>
         </ContactContainer>
@@ -91,6 +88,7 @@ const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     overflow-y:auto;
     ::-webkit-scrollbar{
         display:none;
@@ -127,18 +125,19 @@ const Paragraph = styled.p`
 
 const Form = styled.form`
     height:50vh;
-    width:20%;
+    min-width:20%;
     border:1px solid #555;
     border-radius:10px;
-    padding:30px;
+    padding:1%;
     display:flex;
     flex-direction:column;  
-    justify-content:space-evenly;
+    justify-content:center;
     align-items:center;
     margin-bottom:3%;
     @media (max-width:900px){
         width: 60%;
         height:70vh;
+        overflow-y:scroll;
     }
 
     label{
@@ -148,8 +147,8 @@ const Form = styled.form`
     }
 `
 const Information = styled.input`
-    width:100%;
-    height:10%;
+    width:70%;
+    min-height:5%;
     background-color:aliceblue;
     border:1px solid #D4D4D4;
     border-radius:8px;
@@ -157,14 +156,14 @@ const Information = styled.input`
     color:#000000;
     &::placeholder{
         color:#555;
-        font-size:16px;
+        font-size:0.7rem;
         font-weight:400;
         font-style:italic;
     }    
 `
 const TextareaStyled = styled.textarea`
-    width:100%;
-    min-height:35%;
+    width:70%;
+    min-height:15%;
     background-color:aliceblue;
     border:1px solid #D4D4D4;
     border-radius:8px;
@@ -173,21 +172,21 @@ const TextareaStyled = styled.textarea`
     text-align: justify;
     &::placeholder{
         color:#555;
-        font-size:16px;
+        font-size:0.7rem;
         font-weight:400;
         font-style:italic;
     }    
     
 `
 const Submition = styled.input`
-    width:100%;
-    height:10%;
+    width:70%;
+    min-height:5%;
     background-color:#555;
     border:none;
     border-radius:8px;
     margin-top:20px;
     color:aliceblue;
-    font-size:18px;
+    font-size:0.8rem;
     font-weight:700;
         
 `
