@@ -111,27 +111,28 @@ const WorkGrid = styled.div`
 
 `
 const ShortItem = styled.div`
-    margin:2%;
-    border-radius:10px;
-    display:flex;
-    flex-direction: column;
-    //justify-items:center;
-    //align-items:center;
     width:80%;
     height:100%;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
     background-color: #062783;
     img{
-        margin:5%;
-        width: 80%;
+        width: 60%;
         height: 60%;
         border-radius:5%;
     }
     a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size:0.8rem;
         text-decoration:none;
         color:#006ff7;
-        justify-content:center;
-        align-items: center;
+        text-align: center;
     }
  
 `
@@ -155,10 +156,14 @@ const TallItem = styled.div`
     
     }
     a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size:0.8rem;
         text-decoration:none;
         color: #006ff7;
-        justify-content:center;
+        text-align: center;
     }
 
     
@@ -182,9 +187,14 @@ const WideItem = styled.div`
 
     }
     a{  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size:0.8rem;
         text-decoration:none;
         color: #006ff7;
+        text-align: center;
     }
 
 `
