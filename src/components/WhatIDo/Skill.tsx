@@ -4,16 +4,13 @@ import { useState } from "react";
 
 const Skill = ({ name, iconName }: { name: string; iconName: React.ReactElement<{ className?: string }> }) => {
 
-    const [isHovered, setIsHovered] = useState(false)
-    function onHover(){
-        setIsHovered(true);
-    };
-    function onHoverOver(){
-        setIsHovered(false);
+    const [isOn, setIsOn] = useState(false);
+    const handleToggle = () => {
+    setIsOn(prevState => !prevState);
     };
     return(
-        <Box onMouseOver={onHover} onMouseLeave={onHoverOver}>
-           {isHovered ? <p>{name}</p> : iconName}                   
+        <Box onClick={handleToggle}>
+           {isOn ? <p>{name}</p> : iconName}                   
         </Box>  
     )
 }

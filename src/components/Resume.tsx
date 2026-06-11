@@ -3,6 +3,8 @@ import { BiDownload } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import resume from "../assets/rosa_annylory-lima_eng.pdf"
 import ArrowDownDouble from "./ArrowDownDouble";
+import ArrowMobileLeft from "./ArrowMobileLeft";
+import ArrowMobileRight from "./ArrowMobileRight";
 
 const Resume = () => {
     
@@ -61,6 +63,8 @@ const Resume = () => {
                 </HireMeButton>
             </ButtonsContainer>
             <ArrowDownDouble path="/portfolio" />
+            <ArrowMobileLeft path="/skills" />
+            <ArrowMobileRight path="/portfolio"/>
         </ResumeContainer>
      )
 }
@@ -74,6 +78,9 @@ const ResumeContainer = styled.div`
     flex-direction:column;
     justify-items:center;
     align-items: center;
+    @media screen and (max-width:1000px){
+        max-height: 85vh;
+    }
     
 `
 const PageTitle = styled.h1`
@@ -83,7 +90,7 @@ const PageTitle = styled.h1`
     padding: 20px 20px 0 20px;
     font-size: clamp(1rem, 5vw, 4rem);
     color:#007BFF;
-    @media (max-width:1350px){
+    @media screen and (max-width:1350px){
         font-size: 2rem;
     }
 `
@@ -93,7 +100,7 @@ const GeneralContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    @media (max-width:1350px){
+    @media screen and (max-width:1350px){
         max-height: 80vh;
         flex-direction: column;
         overflow-y: auto;
@@ -112,7 +119,7 @@ const Container = styled.div`
         font-size: 1rem;
         }
     }   
-    @media (max-width:1050px) {
+    @media screen and (max-width:1050px) {
         width: 100%;
         font-size: 1rem;
     }

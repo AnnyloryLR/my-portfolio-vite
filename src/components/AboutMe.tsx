@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import HireMeButton from "./HireMeButton";
 import ArrowDownDouble from "./ArrowDownDouble";
+import ArrowMobileLeft from "./ArrowMobileLeft";
+import ArrowMobileRight from "./ArrowMobileRight";
 
 const AboutMe = () => {
     
@@ -27,6 +29,8 @@ const AboutMe = () => {
             </Paragraph>
             <HireMeButton/>
             <ArrowDownDouble path="/skills"/>
+            <ArrowMobileLeft path="/"/>
+            <ArrowMobileRight path="/skills"/>
         </AboutMeContainer>
      )
 }
@@ -44,7 +48,7 @@ const Title = styled.h1`
     padding:3%;
     font-size: 4rem;
     color:#007bff;
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         font-size:2rem;
     }
     
@@ -52,7 +56,7 @@ const Title = styled.h1`
 const Presentation = styled.div`
     width: 60%;
     text-align:left;
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         width: 80%;
         font-size:1rem;
     }
@@ -61,7 +65,7 @@ const Subtitle = styled.p`
     display:inline;
     font-size: clamp(1rem, 5vw, 1.8rem);  
     color:#555;
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         font-size:1rem;
     }
 `
@@ -69,7 +73,7 @@ const MyName = styled.p`
     display:inline;
     color:#007bff;
     font-size: clamp(1rem, 5vw, 1.8rem);  
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         font-size:1rem;
     }
 `
@@ -83,12 +87,12 @@ const Paragraph = styled.p`
         color: #007bff;
         text-decoration: none;
     }
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         line-height: 1;
         font-size:1.2rem;
         text-align:center;
     }
-    @media (max-width:700px) {
+    @media screen and (max-width:700px) {
         width:80%;
         line-height: normal;
         font-size:0.8rem;

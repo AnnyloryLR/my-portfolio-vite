@@ -36,12 +36,12 @@ const NavBarStyle = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 1600px) {
+  @media screen and (max-width: 1600px) {
     width:10vw;
 
     
   } 
-  @media (max-width: 1000px) {
+  @media screen and (max-width:1024px) {
       height: 14vh;
       width:100%;
       position:absolute;
@@ -62,9 +62,9 @@ const Profile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content:center;
-  @media (max-width: 1000px) {
+  @media screen and (max-width:1024px) {
     height: 80%;
-    width: 25%;
+    width: 20%;
     margin:1%;
     padding: 2%;
   
@@ -78,7 +78,7 @@ const Profile = styled.div`
     border-radius: 50%;
     margin-bottom: 1rem;
     object-fit:contain;
-    @media (max-width: 1000px) {
+    @media screen and (max-width:1000px) {
       margin-bottom: 0;
     }
   }
@@ -90,7 +90,7 @@ const MyName = styled(Link)`
   font-size: 1rem;
   text-decoration: none;
   text-align:center;
-  @media (max-width: 1000px) {
+  @media screen and (max-width:1024px) {
     font-size:0.5rem;
   }
 `
@@ -113,15 +113,17 @@ const Menu = styled.div`
       color: #0c71ec;
     }
   }
-  @media (max-width: 1000px) {
+  @media sreen and (max-width: 1024px) {
     height: 80%;
-    width: 75%;
+    width: 80%;
+    padding:2%;
     display:flex;
     flex-direction:row;
     justify-content: center;
     align-items: center;
     a{
       font-size: 0.5rem;
+      text-align:center;
     }
   }
 `
