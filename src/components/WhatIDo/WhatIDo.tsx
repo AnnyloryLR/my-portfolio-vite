@@ -10,6 +10,8 @@ import { PiInfinity } from 'react-icons/pi';
 import { SiPrisma, SiNginx } from "react-icons/si";
 import { TbBrandAuth0 } from 'react-icons/tb';
 import ArrowDownDouble from '../ArrowDownDouble';
+import ArrowMobileLeft from '../ArrowMobileLeft';
+import ArrowMobileRight from '../ArrowMobileRight';
 
 type SkillIcon = React.ReactElement<{className?: string}>;
 
@@ -47,6 +49,8 @@ const WhatIDo = () => {
             </BigContainer>
             <HireMeButton/>
             <ArrowDownDouble path="/resume" />
+            <ArrowMobileLeft path="/about"/>
+            <ArrowMobileRight path="/resume"/>
         </WhatIDoContainer>
     )
 }
@@ -63,8 +67,8 @@ const WhatIDoContainer = styled.div`
     ::-webkit-scrollbar{
         display: none;
     }
-    @media (max-width:900px) {
-       
+    @media screen and (max-width:1000px) {
+       max-height: 85vh;
     }
 
 `
@@ -75,7 +79,7 @@ const Title = styled.h1`
     justify-content: center;
     font-size: clamp(1rem, 5vw, 4rem);
     color:#007bff;
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         font-size:2rem;
         
     }
@@ -86,7 +90,7 @@ const BigContainer = styled.div`
     height:70vh;
     display: flex;
     justify-content: center;
-    @media (max-width:900px) {
+    @media screen and (max-width:900px) {
         width:100%;
         height: 70vh;
         display: flex;

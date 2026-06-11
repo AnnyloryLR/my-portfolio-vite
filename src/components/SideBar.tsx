@@ -36,14 +36,19 @@ const NavBarStyle = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 1600px) {
-      width:10vw;
+  @media screen and (max-width: 1600px) {
+    width:10vw;
 
     
   } 
-  @media (max-width: 1000px) {
-      position: relative;
-      display: none;
+  @media screen and (max-width:1024px) {
+      height: 14vh;
+      width:100%;
+      position:absolute;
+      top: 0;
+      border-bottom:1px solid aliceblue;
+      display: flex;
+      flex-direction: row;
 
     
   }
@@ -57,6 +62,13 @@ const Profile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content:center;
+  @media screen and (max-width:1024px) {
+    height: 80%;
+    width: 20%;
+    margin:1%;
+    padding: 2%;
+  
+  }
 
   img{
     width: 50%;
@@ -66,15 +78,21 @@ const Profile = styled.div`
     border-radius: 50%;
     margin-bottom: 1rem;
     object-fit:contain;
+    @media screen and (max-width:1000px) {
+      margin-bottom: 0;
+    }
   }
 `
 const MyName = styled(Link)`
   width: 100%;
   height: 50%;
   color: #0c71ec;
-  font-size: 100%;
+  font-size: 1rem;
   text-decoration: none;
   text-align:center;
+  @media screen and (max-width:1024px) {
+    font-size:0.5rem;
+  }
 `
 
 const Menu = styled.div`
@@ -88,11 +106,24 @@ const Menu = styled.div`
   margin-top: 5%;
   a{
     color: aliceblue;
-    font-size: 100%;
+    font-size: 1rem;
     text-decoration: none;
     transition: color 0.3s ease;
     &:hover {
       color: #0c71ec;
+    }
+  }
+  @media sreen and (max-width: 1024px) {
+    height: 80%;
+    width: 80%;
+    padding:2%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    a{
+      font-size: 0.5rem;
+      text-align:center;
     }
   }
 `

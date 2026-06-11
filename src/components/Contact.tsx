@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { RiHome7Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import ArrowMobileLeft from "./ArrowMobileLeft";
 
 const Contact = () => {
     const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID as string
@@ -38,6 +39,7 @@ const Contact = () => {
         return (
         <ContactContainer>
         <Link to={"/"} ><BackToHome/></Link>
+        <ArrowMobileLeft path="/portfolio"/>
         <Title>Contact Me</Title>
         <Paragraph>Feel free to reach me out using the form below or through my email: annyloryrosa@gmail.com</Paragraph>
                     <Form ref={formRef} onSubmit={sendEmail}>
@@ -96,7 +98,21 @@ const ContactContainer = styled.div`
     ::-webkit-scrollbar{
         display:none;
     }
+    @media screen and (max-width:1000px) {
+       max-height: 85vh;
+    }
 `
+const BackToHome = styled(RiHome7Fill)`
+    position:fixed;
+    top:2vh;
+    left:85vw;
+    color: #007BFF;
+    font-size:36px;
+    @media screen and (max-width:1000px){
+        top:17vh;
+        left:85vw;
+    }
+`    
 
 const Title = styled.h1`
     margin:0px;
@@ -106,7 +122,7 @@ const Title = styled.h1`
     align-items: center;
     font-size: clamp(1rem, 5vw, 4rem);
     color:#007bff;
-    @media (max-width:900px){
+    @media screen and (max-width:900px){
         font-size:2rem;
         width: 100%;
     }
@@ -120,7 +136,7 @@ const Paragraph = styled.p`
     line-height: 2;
     text-align: center;
     color: #007bff;
-    @media (max-width:900px){
+    @media screen and (max-width:900px){
         max-width: 60%;;
         font-size:0.8rem;
     }
@@ -137,7 +153,7 @@ const Form = styled.form`
     justify-content:center;
     align-items:center;
     margin-bottom:3%;
-    @media (max-width:900px){
+    @media screen and (max-width:900px){
         width: 60%;
         height:70vh;
         overflow-y:scroll;
@@ -193,11 +209,5 @@ const Submition = styled.input`
     font-weight:700;
         
 `
-const BackToHome = styled(RiHome7Fill)`
-    position:fixed;
-    top:2vh;
-    left:85vw;
-    color: #007BFF;
-    font-size:36px;
-`
+
 
