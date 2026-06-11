@@ -113,7 +113,7 @@ const Menu = styled.div`
       color: #0c71ec;
     }
   }
-  @media sreen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     height: 80%;
     width: 80%;
     padding:2%;
