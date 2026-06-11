@@ -37,7 +37,7 @@ const Contact = () => {
     
         return (
         <ContactContainer>
-        <Link to={"/"} ><BackToHome/></Link>
+        <LinkBackToHome to={"/"} ><BackToHome/></LinkBackToHome>
         <Title>Contact Me</Title>
         <Paragraph>Feel free to reach me out using the form below or through my email: annyloryrosa@gmail.com</Paragraph>
                     <Form ref={formRef} onSubmit={sendEmail}>
@@ -97,7 +97,11 @@ const ContactContainer = styled.div`
         display:none;
     }
 `
-
+const LinkBackToHome = styled(Link)`
+    @media (max-width:1000px){
+        display:none;
+    }
+`
 const Title = styled.h1`
     margin:0px;
     padding: 50px;

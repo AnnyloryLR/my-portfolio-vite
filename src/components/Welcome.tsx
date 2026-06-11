@@ -37,14 +37,14 @@ const HeroPage = styled.div`
     background-size:cover;
     color: aliceblue;
     text-align: center;
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content:center;
         text-align: center;
-        min-height: 100vh;
-        min-width: 100vw;
+        min-height: 86vh;
+        min-width: 100%;
     
   }
 `

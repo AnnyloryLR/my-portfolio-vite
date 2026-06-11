@@ -24,6 +24,12 @@ const LinkStyled = styled(Link)`
   display:flex;
   align-items:center;
   justify-content:center;
+  @media (max-width:1000px){
+    position:fixed;
+    top: 75vh;
+    right:1vw;
+
+  }
 
 `
 const bounce = keyframes`

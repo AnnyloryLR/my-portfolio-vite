@@ -64,17 +64,16 @@ const PageContent = styled.div`
   color: #555;
   text-align: center;
   @media (max-width:1000px) {
-    min-height: 100vh;
-    min-width:100vw;
-    position: relative;
-    top:0;
+  
+    position: absolute;
+    top:15vh;
     left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-left: 1px outset #141414;
-    min-height: 100vh;
+    max-height: 85vh;
     min-width: 100vw;
     border:none;
     
