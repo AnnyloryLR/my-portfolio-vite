@@ -6,6 +6,9 @@
   ],
   "compilerOptions": {
     "lib":["WebWorker"],
+    "jsx": "react-jsx",
+    "strictNullChecks": true // Recommended for better type inference
   },
+  "include": ["**/*.ts", "**/*.tsx"]
   
 }
