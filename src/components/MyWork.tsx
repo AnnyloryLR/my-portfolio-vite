@@ -75,7 +75,7 @@ const MyWorkContainer = styled.div`
     ::-webkit-scrollbar{
         display:none;
     }
-    @media screen and (max-width:1000px){
+    @media screen and (max-width:1024px){
         min-height: 85vh;
     }
 

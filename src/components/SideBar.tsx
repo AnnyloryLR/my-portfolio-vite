@@ -41,7 +41,7 @@ const NavBarStyle = styled.nav`
 
     
   } 
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width:1024px) {
       height: 14vh;
       width:100%;
       position:absolute;
@@ -62,7 +62,7 @@ const Profile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content:center;
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width:1024px) {
     height: 80%;
     width: 20%;
     margin:1%;
@@ -90,7 +90,7 @@ const MyName = styled(Link)`
   font-size: 1rem;
   text-decoration: none;
   text-align:center;
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width:1024px) {
     font-size:0.5rem;
   }
 `
@@ -113,7 +113,7 @@ const Menu = styled.div`
       color: #0c71ec;
     }
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     height: 80%;
     width: 80%;
     padding:2%;
@@ -123,6 +123,7 @@ const Menu = styled.div`
     align-items: center;
     a{
       font-size: 0.5rem;
+      text-align:center;
     }
   }
 `

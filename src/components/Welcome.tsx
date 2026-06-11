@@ -41,7 +41,7 @@ const HeroPage = styled.div`
     background-size:cover;
     color: aliceblue;
     text-align: center;
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:1024px) {
         display: flex;
         flex-direction: column;
         align-items: center;
