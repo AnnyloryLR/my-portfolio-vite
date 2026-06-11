@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { FaGithub} from "react-icons/fa";
 import HireMeButton from "./HireMeButton";
 import ArrowDownDouble from "./ArrowDownDouble";
+import ArrowMobileLeft from "./ArrowMobileLeft";
+import ArrowMobileRight from "./ArrowMobileRight";
 
 const MyWork = () => {
     
@@ -55,6 +57,8 @@ const MyWork = () => {
             </WorkGrid>
             <HireMeButton/>
             <ArrowDownDouble path="/contact"/>
+            <ArrowMobileLeft path="/resume"/>
+            <ArrowMobileRight path="/contact"/>
 
         </MyWorkContainer>
      )
@@ -71,7 +75,7 @@ const MyWorkContainer = styled.div`
     ::-webkit-scrollbar{
         display:none;
     }
-    @media (max-width:1000px){
+    @media screen and (max-width:1000px){
         min-height: 85vh;
     }
 
@@ -86,7 +90,7 @@ const Title = styled.h1`
     padding: 30px;
     font-size: clamp(1rem, 5vw, 4rem);
     color: #006ff7;
-    @media (max-width: 900px){
+    @media screen and (max-width: 900px){
         font-size:2rem;
     }
     
@@ -103,10 +107,10 @@ const WorkGrid = styled.div`
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px; // Base height increment unit
+    grid-auto-rows: 300px;
     gap:2%; 
     overflow-y:scroll;
-    @media (max-width:1000px){
+    @media screen and (max-width:1000px){
         display:flex;
         flex-direction:column;
         height: 65vh;
@@ -122,7 +126,6 @@ const ShortItem = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-  
     background-color: #062783;
     img{
         margin-top: 2%;
@@ -145,7 +148,7 @@ const ShortItem = styled.div`
 const TallItem = styled.div`
     margin:2%;
     border-radius:10px;
-    grid-row: span 2; // Spans 2 row segments (200px + gap)
+    grid-row: span 2; 
     display:flex;
     flex-direction: column;
     justify-items:center;
@@ -178,7 +181,7 @@ const WideItem = styled.div`
     margin:2%;
     border-radius:10px;
     display:grid;
-    grid-column: span 2; // Spans 2 columns horizontally
+    grid-column: span 2; 
     align-items:center;
     justify-content:center;
     height:100%;
