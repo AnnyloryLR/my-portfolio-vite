@@ -63,7 +63,7 @@ const PageContent = styled.div`
   background-color:#111418;
   color: #555;
   text-align: center;
-  @media (max-width:1024px) {
+  @media screen and (max-width:1024px) {
     position: absolute;
     top:15vh;
     left: 0;
