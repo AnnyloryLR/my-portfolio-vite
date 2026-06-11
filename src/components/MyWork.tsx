@@ -71,6 +71,9 @@ const MyWorkContainer = styled.div`
     ::-webkit-scrollbar{
         display:none;
     }
+    @media (max-width:1000px){
+        min-height: 85vh;
+    }
 
 `
 
