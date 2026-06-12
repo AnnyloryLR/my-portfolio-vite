@@ -101,6 +101,7 @@ const GeneralContainer = styled.div`
     flex-direction: row;
     align-items: center;
     @media screen and (max-width:1350px){
+        width: 100%;
         max-height: 80vh;
         flex-direction: column;
         overflow-y: auto;
@@ -119,7 +120,7 @@ const Container = styled.div`
         font-size: 1rem;
         }
     }   
-    @media screen and (max-width:1050px) {
+    @media screen and (max-width:10240px) {
         width: 100%;
         font-size: 1rem;
     }

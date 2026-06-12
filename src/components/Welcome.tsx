@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
-import welcomePicture from "../assets/welcomePage.png"
-import HireMeButton from "./HireMeButton";
+import welcomePicture from "../assets/welcomePage.png";
 import ArrowDownDouble from "./ArrowDownDouble";
 import ArrowMobileRight from "./ArrowMobileRight";
 const Welcome = () => {
@@ -15,7 +14,6 @@ const Welcome = () => {
                         { strings: ['My name is Annylory.', 'You can call me Anny.', "I'm a Developer.", 'And that\'s my cat... Linus!'],
                         autoStart: true, loop: true }} /> 
                 </WelcomeText>
-                <HireMeButton/>
                 <HireMeButtonStyle to={"/contact"} >Hire Me</HireMeButtonStyle>
                 <ArrowDownDouble path="/about"></ArrowDownDouble>
                 <ArrowMobileRight path="/about"></ArrowMobileRight>
@@ -54,23 +52,32 @@ const HeroPage = styled.div`
 `
 const WelcomeText = styled.h1`
     padding:2%;
-    font-size:  clamp(1rem, 5vw, 3rem);
+    font-size: 4rem;
+    line-height: 2;
     font-weight: 500;
+    @media (max-width:1024px){
+        font-size:2rem;
+        margin-top:10%;
+    }
 `
 const Title = styled.p`
     padding:2%;
-    font-size: clamp(1rem, 5vw, 2rem);
-    font-weight: 400;       
+    font-size: 3rem;
+    font-weight: 400; 
+    @media (max-width:1024px){
+        font-size:1.5rem;
+        margin-top:10%;
+    }      
 `     
 
 const HireMeButtonStyle = styled(Link)`
-    @media screen and (min-width: 1010px){
+    @media screen and (min-width: 1024px){
         display:none;
     }
 
     @media screen and (max-width:1000px){
         position:fixed;
-        top: 35vh;
+        top: 70vh;
         width:100px;
         height:30px;
         display:flex;

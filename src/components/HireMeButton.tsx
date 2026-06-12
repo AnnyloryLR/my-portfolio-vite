@@ -25,7 +25,5 @@ const HireMeButtonStyle = styled(Link)`
     text-decoration:none;
     color:#006ff7;
     font-size:1rem; 
-    @media (max-width:1000px){
-      display:none;
-    }      
+   
 `

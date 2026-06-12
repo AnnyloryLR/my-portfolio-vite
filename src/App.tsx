@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HamburgerMenu from './components/HamburgerMenu';
 import SideBar from './components/SideBar';
 import Welcome from './components/Welcome';
 import AboutMe from './components/AboutMe';
@@ -11,10 +12,10 @@ import { createBrowserRouter, ScrollRestoration, Outlet, RouterProvider } from '
 
 const RootLayout = () => {
   return(
-
     <Page>
       <SideBar/>
       <PageContent>
+        <HamburgerMenu/>
         <ScrollRestoration/>
         <Outlet/>
       </PageContent>
