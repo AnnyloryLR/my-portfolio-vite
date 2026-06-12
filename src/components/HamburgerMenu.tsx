@@ -4,6 +4,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import { useState } from "react";
 
 const HamburgerMenu = () => {
+    
     const [isSelected, setSelected] = useState(false)
     
     const showMenu = () => {
@@ -12,12 +13,12 @@ const HamburgerMenu = () => {
         } else{
           setSelected(false)
         }
-        console.log(" I am been called")
+
     }
     return(
         <HamburgerMenuStyle>
             <Menu onClick={showMenu}/>
-            <HamburgerMenuItens $isSelected={false}>
+            <HamburgerMenuItens $isSelected={isSelected}>
                 <Link to="/">Home</Link>
                 <Link to="/about" >About me</Link>
                 <Link to="/skills" >What I do</Link>
@@ -43,10 +44,9 @@ const HamburgerMenuStyle = styled.div`
     flex-direction:column;
     justify-content: left;
     align-items: end;
-    border:1px solid yellow;
     height: 500px;
     width: 200px;;
-    background-color: rgba(0,0,0,0.8);   
+    background-color: none;   
    }
  
 `
@@ -65,8 +65,9 @@ const HamburgerMenuItens =  styled.div<{$isSelected: boolean}>`
   align-items:center;
   gap: 3%;
   margin-top: 5%;
-  border: 1px solid violet;
-  background-color: ${($isSelected) => $isSelected ? 'yellow' :'white'};
+  border: 1px solid black;
+  background-color: rgba(0,0,0,0.5);
+  display: ${({$isSelected}) => $isSelected ? '' :'none'};
   a{
     text-decoration: none;
     color:aliceblue;
