@@ -92,7 +92,7 @@ const BigContainer = styled.div`
     justify-content: center;
     @media screen and (max-width:900px) {
         width:100%;
-        height: 70vh;
+        height: 55vh;
         display: flex;
         flex-direction:column;
         overflow-y:auto;
