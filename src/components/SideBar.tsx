@@ -118,20 +118,6 @@ const Menu = styled.div`
   
   }
   @media (max-width: 1024px) {
-<<<<<<< HEAD
-    height: 80%;
-    width: 80%;
-    padding:2%;
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    a{
-      font-size: 0.5rem;
-      text-align:center;
-    }
-=======
     display: none;
->>>>>>> release
   }
 `
