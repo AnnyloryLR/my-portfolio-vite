@@ -2,15 +2,16 @@ import styled from  "styled-components";
 import { Link } from "react-router-dom";
 import cvPicture from "../assets/cv_image.png";
 
-const SideBar = () => {
-  return (
-    <NavBarStyle>
-      <Profile>
-        <img id="cvPicture" src={cvPicture} />
-        <MyName to="/about" >Annylory Rosa</MyName>
-      </Profile>
 
-      <Menu>
+const SideBar = () => {
+
+  return (
+    <NavBarStyle >
+      <Profile to="/about">
+          <img id="cvPicture" src={cvPicture} />
+          <MyName>Annylory Rosa</MyName>       
+      </Profile>
+      <Menu >
         <Link to="/">Home</Link>
         <Link to="/about" >About me</Link>
         <Link to="/skills" >What I do</Link>
@@ -20,8 +21,7 @@ const SideBar = () => {
       </Menu>
     </NavBarStyle>
   );
-};
-
+}
 export default SideBar;
 
 const NavBarStyle = styled.nav`
@@ -54,7 +54,7 @@ const NavBarStyle = styled.nav`
   }
 
 `
-const Profile = styled.div`
+const Profile = styled(Link)`
   width: 100%;
   height: 25%;
   margin-top: 2rem;
@@ -62,6 +62,7 @@ const Profile = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content:center;
+  text-decoration:none;
   @media screen and (max-width:1024px) {
     height: 80%;
     width: 20%;
@@ -76,19 +77,18 @@ const Profile = styled.div`
     background-color: #000000;
     border: 5px solid #343A40;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 1rem;
     object-fit:contain;
     @media screen and (max-width:1000px) {
       margin-bottom: 0;
     }
   }
 `
-const MyName = styled(Link)`
+const MyName = styled.p`
   width: 100%;
   height: 50%;
   color: #0c71ec;
   font-size: 1rem;
-  text-decoration: none;
   text-align:center;
   @media screen and (max-width:1024px) {
     font-size:0.5rem;
@@ -104,6 +104,9 @@ const Menu = styled.div`
   align-items:center;
   gap: 3%;
   margin-top: 5%;
+  @media (max-width: 1024px) {
+    display:none;
+  }
   a{
     color: aliceblue;
     font-size: 1rem;
@@ -112,6 +115,7 @@ const Menu = styled.div`
     &:hover {
       color: #0c71ec;
     }
+  
   }
   @media (max-width: 1024px) {
     height: 80%;
