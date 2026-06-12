@@ -2,15 +2,16 @@ import styled from  "styled-components";
 import { Link } from "react-router-dom";
 import cvPicture from "../assets/cv_image.png";
 
+
 const SideBar = () => {
+
   return (
-    <NavBarStyle>
+    <NavBarStyle >
       <Profile>
         <img id="cvPicture" src={cvPicture} />
         <MyName to="/about" >Annylory Rosa</MyName>
       </Profile>
-
-      <Menu>
+      <Menu >
         <Link to="/">Home</Link>
         <Link to="/about" >About me</Link>
         <Link to="/skills" >What I do</Link>
@@ -20,8 +21,7 @@ const SideBar = () => {
       </Menu>
     </NavBarStyle>
   );
-};
-
+}
 export default SideBar;
 
 const NavBarStyle = styled.nav`
@@ -104,6 +104,9 @@ const Menu = styled.div`
   align-items:center;
   gap: 3%;
   margin-top: 5%;
+  @media (max-width: 1024px) {
+    display:none;
+  }
   a{
     color: aliceblue;
     font-size: 1rem;
@@ -112,18 +115,7 @@ const Menu = styled.div`
     &:hover {
       color: #0c71ec;
     }
+  
   }
-  @media (max-width: 1024px) {
-    height: 80%;
-    width: 80%;
-    padding:2%;
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    a{
-      font-size: 0.5rem;
-      text-align:center;
-    }
-  }
+ 
 `
