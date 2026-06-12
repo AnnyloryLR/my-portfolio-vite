@@ -54,6 +54,7 @@ const HamburgerMenuStyle = styled.div`
 const Menu = styled(IoMenuOutline)`
   font-size: 42px;
   color:aliceblue;
+  margin:5%;
  
 `
 const HamburgerMenuItens =  styled.div<{$isSelected: boolean}>`
@@ -65,12 +66,20 @@ const HamburgerMenuItens =  styled.div<{$isSelected: boolean}>`
   align-items:center;
   gap: 3%;
   margin-top: 5%;
+  margin-right: 5%;
   border: 1px solid black;
+  border-radius: 10px;
   background-color: rgba(0,0,0,0.5);
   display: ${({$isSelected}) => $isSelected ? '' :'none'};
   a{
     text-decoration: none;
     color:aliceblue;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #0c71ec;
+    }
+  
   }
-
 `
