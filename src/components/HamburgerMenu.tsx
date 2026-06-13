@@ -18,7 +18,8 @@ const HamburgerMenu = () => {
     return(
         <HamburgerMenuStyle >
             <Menu onClick={showMenu}/>
-            <HamburgerMenuItens $isSelected={isSelected}>
+            <MenuPopUp onClick={() => setSelected(false)}>
+               <HamburgerMenuItens $isSelected={isSelected}>
                 <Link to="/">Home</Link>
                 <Link to="/about" >About me</Link>
                 <Link to="/skills" >What I do</Link>
@@ -26,7 +27,9 @@ const HamburgerMenu = () => {
                 <Link to="/portfolio" >My Work</Link>
                 <Link to="/contact">Contact</Link>
        
-            </HamburgerMenuItens>
+              </HamburgerMenuItens>
+            </MenuPopUp>
+           
         </HamburgerMenuStyle>
     )
 
@@ -37,16 +40,13 @@ export default HamburgerMenu
 const HamburgerMenuStyle = styled.div`
    display:none;
    @media (max-width:1024px) {
-    //border:1px solid violet;
+    height: 90%;
     position:fixed;
     top:0;
     right:0;
     display:flex;
     flex-direction:column;
-    justify-content: left;
-    align-items: end;
-    height: 70%;
-    width:50%;
+    align-items:end;
     background-color: none;   
    }
  
@@ -58,9 +58,20 @@ const Menu = styled(IoMenuOutline)`
   margin:5%;
  
 `
+const MenuPopUp = styled.div`
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top:12vh;
+  right:0;
+  display:flex;
+  justify-content: right;
+
+ 
+`
 const HamburgerMenuItens =  styled.div<{$isSelected: boolean}>`
   height:40%;
-  width: 100%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -68,12 +79,12 @@ const HamburgerMenuItens =  styled.div<{$isSelected: boolean}>`
   gap: 3%;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgb(0,0,0);
   display: ${({$isSelected}) => $isSelected ? '' :'none'};
   a{
     text-decoration: none;
     color:aliceblue;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-decoration: none;
     transition: color 0.3s ease;
     &:hover {
