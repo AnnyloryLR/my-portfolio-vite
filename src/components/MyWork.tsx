@@ -10,32 +10,32 @@ const MyWork = () => {
         <MyWorkContainer>
             <Title>My Work</Title>           
             <WorkGrid>
-                <ShortItem>               
+                <Item>               
                     
                     <a href="https://github.com/AnnyloryLR/boardcamp_oo">
                         <img src="https://www.tovima.com/wp-content/uploads/2024/01/22/board-games-scaled.jpg"/>
                         BoardCamp: API for game rental - JAVA & Spring Boot 
                         <StyledIcon/>
                     </a> 
-                </ShortItem>
+                </Item>
                     
-                <TallItem>
+                <Item>
                     <iframe src="https://www.youtube.com/embed/GK0-ca5RLpk" ></iframe>
                     <a href="https://github.com/AnnyloryLR/TrackIt">
                         TrackIt: web app for tracking daily activities - React & Vite
                         <StyledIcon/>
                     </a>           
-                </TallItem>
+                </Item>
                             
-                <ShortItem>
+                <Item>
                     <a href="https://github.com/AnnyloryLR/driven_recharge">
                         <img src="https://www.tekcommerce.com.br/assets/img/recarga-celular.png"/>
                         Driven-recharge: API for mobile recharge - Node & Express
                         <StyledIcon/>
                     </a>    
-                </ShortItem>
+                </Item>
 
-                <WideItem>
+                <Item>
                     <iframe src="https://youtube.com/embed/-MOkgSfN_5U" ></iframe>
                     <a href="https://github.com/AnnyloryLR/ParrotGame.github.io">
                         Parrot Game: Web app to play memo game with parrots - 
@@ -43,16 +43,16 @@ const MyWork = () => {
                         <StyledIcon/>
                     </a> 
                     
-                </WideItem>
+                </Item>
 
-                <TallItem>
+                <Item>
                     <iframe src="https://www.youtube.com/embed/5Nusg8muZMA" ></iframe>
                     <a href="https://github.com/AnnyloryLR/cineflex">
                         Cineflex: web app for booking movie tickets - React & Vite
                         <StyledIcon/>
                     </a> 
                     
-                </TallItem>
+                </Item>
             </WorkGrid>
             <ArrowDownDouble path="/contact"/>
             <ArrowMobileLeft path="/resume"/>
@@ -82,34 +82,33 @@ const MyWorkContainer = styled.div`
 `
 
 const Title = styled.h1`
+    margin:0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5%;
     font-size: clamp(1rem, 5vw, 4rem);
     color: #006ff7;
-    @media screen and (max-width: 900px){
+    @media (max-width: 900px){
         font-size:2rem;
     }
     
 `
 
 const WorkGrid = styled.div`
-    width:70%;
+    width: 70%;
     height: 50%;
     border-top:3px groove #006ff7;
     border-radius:10px;
     padding:2%;
     background-color: #000000;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px;
     gap:2%; 
     overflow-y:scroll;
     @media (max-width:1024px){
-        max-height: 70%;
+        height: 80%;
         max-width: 100%;
         display:flex;
         flex-direction:column;
@@ -117,44 +116,53 @@ const WorkGrid = styled.div`
     }
 
 `
-const ShortItem = styled.div`
-    width:80%;
-    height:100%;
-    border-radius:10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #062783;
-    img{
-        margin-top: 2%;
-        width: 60%;
-        height: 60%;
-        border-radius:5%;
-    }
-    a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size:0.8rem;
-        text-decoration:none;
-        color:#006ff7;
-        text-align: center;
-        margin:5%;
-    }
+// const ShortItem = styled.div`
+//     width:80%;
+//     height:100%;
+//     border-radius:10px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #062783;
+//     img{
+//         margin-top: 2%;
+//         width: 60%;
+//         height: 60%;
+//         border-radius:5%;
+//     }
+//     a{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         font-size:0.8rem;
+//         text-decoration:none;
+//         color:#006ff7;
+//         text-align: center;
+//         margin:5%;
+//     }
  
-`
-const TallItem = styled.div`
+// `
+const Item = styled.div`
+    width:50%;
+    height:70%;
     margin:2%;
     border-radius:10px;
-    grid-row: span 2; 
     display:flex;
     flex-direction: column;
-    justify-items:center;
+    justify-items:flex-start;
     align-items: center;
-    width:70%;
-    height:100%;
     background-color: #062783;
+    @media (max-width:1024px){
+        width: 80%;
+  
+    }
+    img{
+        margin-top: 5%;
+        width: 80%;
+        height: 80%;
+       border-radius:5%;
+    }
     iframe{
         margin:5%;
         height:80%;
@@ -176,36 +184,36 @@ const TallItem = styled.div`
 
     
 `
-const WideItem = styled.div`
-    margin:2%;
-    border-radius:10px;
-    display:grid;
-    grid-column: span 2; 
-    align-items:center;
-    justify-content:center;
-    height:100%;
-    width:80%;
-    background-color: #062783;
-    iframe{
-        margin:5%;
-        height:70%;
-        width: 90%;
-        border-style:none;
-        border-radius:5%;
+// const WideItem = styled.div`
+//     margin:2%;
+//     border-radius:10px;
+//     display:grid;
+//     grid-column: span 2; 
+//     align-items:center;
+//     justify-content:center;
+//     height:100%;
+//     width:80%;
+//     background-color: #062783;
+//     iframe{
+//         margin:5%;
+//         height:70%;
+//         width: 90%;
+//         border-style:none;
+//         border-radius:5%;
 
-    }
-    a{  
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size:0.8rem;
-        text-decoration:none;
-        color: #006ff7;
-        text-align: center;
-    }
+//     }
+//     a{  
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         font-size:0.8rem;
+//         text-decoration:none;
+//         color: #006ff7;
+//         text-align: center;
+//     }
 
-`
+// `
 const StyledIcon = styled(FaGithub)`
     font-size:30px;
     color: #006ff7;
