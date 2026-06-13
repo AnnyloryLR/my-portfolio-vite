@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaGithub} from "react-icons/fa";
-import HireMeButton from "./HireMeButton";
 import ArrowDownDouble from "./ArrowDownDouble";
 import ArrowMobileLeft from "./ArrowMobileLeft";
 import ArrowMobileRight from "./ArrowMobileRight";
@@ -55,7 +54,6 @@ const MyWork = () => {
                     
                 </TallItem>
             </WorkGrid>
-            <HireMeButton/>
             <ArrowDownDouble path="/contact"/>
             <ArrowMobileLeft path="/resume"/>
             <ArrowMobileRight path="/contact"/>
@@ -68,26 +66,26 @@ export default MyWork;
 
 const MyWorkContainer = styled.div`
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     ::-webkit-scrollbar{
         display:none;
     }
-    @media screen and (max-width:1024px){
-        min-height: 85vh;
+    @media (max-width:1024px){
+        height: 87vh;
+        min-width: 100%;
     }
 
 `
 
-
 const Title = styled.h1`
-    margin:10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 5%;
     font-size: clamp(1rem, 5vw, 4rem);
     color: #006ff7;
     @media screen and (max-width: 900px){
@@ -97,8 +95,8 @@ const Title = styled.h1`
 `
 
 const WorkGrid = styled.div`
-    width: 70%;
-    height: 65vh;
+    width:80%;
+    height: 70%;
     border-top:3px groove #006ff7;
     border-radius:10px;
     padding:2%;
@@ -110,11 +108,11 @@ const WorkGrid = styled.div`
     grid-auto-rows: 300px;
     gap:2%; 
     overflow-y:scroll;
-    @media screen and (max-width:1000px){
+    @media (max-width:1024px){
+        max-height: 70%;
+        max-width: 100%;
         display:flex;
         flex-direction:column;
-        height: 65vh;
-        overflow-y: auto;
         justify-content: flex-start;
     }
 

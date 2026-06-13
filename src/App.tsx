@@ -66,14 +66,14 @@ const PageContent = styled.div`
   text-align: center;
   @media screen and (max-width:1024px) {
     position: absolute;
-    top:15vh;
+    top:13vh;
     left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-left: 1px outset #141414;
-    max-height: 85vh;
+    max-height:88vh;
     min-width: 100vw;
     border:none;
     

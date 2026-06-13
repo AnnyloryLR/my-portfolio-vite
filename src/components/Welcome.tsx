@@ -45,7 +45,7 @@ const HeroPage = styled.div`
         align-items: center;
         justify-content:flex-start;
         text-align: center;
-        min-height: 87vh;
+        min-height: 89vh;
         min-width: 100%;
     
   }

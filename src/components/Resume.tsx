@@ -72,14 +72,15 @@ const Resume = () => {
 export default Resume;
 
 const ResumeContainer = styled.div`
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     display:flex;
     flex-direction:column;
     justify-items:center;
     align-items: center;
-    @media screen and (max-width:1000px){
-        max-height: 85vh;
+    @media (max-width:1000px){
+        height: 87vh;
+        min-width: 100%;
     }
     
 `

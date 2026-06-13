@@ -43,6 +43,10 @@ const AboutMeContainer = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
+    @media (max-width:1024px){
+        height: 87vh;
+        min-width: 100%;
+    }
 `
 const Title = styled.h1`
     padding:3%;

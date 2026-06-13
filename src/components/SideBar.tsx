@@ -32,25 +32,20 @@ const NavBarStyle = styled.nav`
   width:12vw;
   height: 100vh;
   background-color: #111418;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (max-width: 1600px) {
-    width:10vw;
 
-    
-  } 
-  @media screen and (max-width:1024px) {
-      height: 14vh;
-      width:100%;
-      position:absolute;
-      top: 0;
-      border-bottom:1px solid aliceblue;
-      display: flex;
-      flex-direction: row;
-
-    
+  @media (max-width:1024px) {
+    border-bottom: 1px inset #141414;
+    border-right:none;
+    height: 12vh;
+    width:100%;
+    position:absolute;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: row;    
   }
 
 `
@@ -77,20 +72,20 @@ const Profile = styled(Link)`
     background-color: #000000;
     border: 5px solid #343A40;
     border-radius: 50%;
-    margin: 1rem;
     object-fit:contain;
-    @media screen and (max-width:1000px) {
-      margin-bottom: 0;
+    @media (max-width:1024px) {
+      margin: 0;
     }
   }
 `
 const MyName = styled.p`
+  margin:0;
   width: 100%;
-  height: 50%;
+  height: 15%;
   color: #0c71ec;
   font-size: 1rem;
   text-align:center;
-  @media screen and (max-width:1024px) {
+  @media (max-width:1024px) {
     font-size:0.5rem;
   }
 `

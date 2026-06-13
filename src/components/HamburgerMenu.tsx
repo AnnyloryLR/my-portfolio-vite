@@ -16,7 +16,7 @@ const HamburgerMenu = () => {
 
     }
     return(
-        <HamburgerMenuStyle>
+        <HamburgerMenuStyle >
             <Menu onClick={showMenu}/>
             <HamburgerMenuItens $isSelected={isSelected}>
                 <Link to="/">Home</Link>
@@ -37,6 +37,7 @@ export default HamburgerMenu
 const HamburgerMenuStyle = styled.div`
    display:none;
    @media (max-width:1024px) {
+    //border:1px solid violet;
     position:fixed;
     top:0;
     right:0;
@@ -44,8 +45,8 @@ const HamburgerMenuStyle = styled.div`
     flex-direction:column;
     justify-content: left;
     align-items: end;
-    height: 500px;
-    width: 200px;;
+    height: 70%;
+    width:50%;
     background-color: none;   
    }
  
@@ -65,8 +66,6 @@ const HamburgerMenuItens =  styled.div<{$isSelected: boolean}>`
   justify-content:center;
   align-items:center;
   gap: 3%;
-  margin-top: 5%;
-  margin-right: 5%;
   border: 1px solid black;
   border-radius: 10px;
   background-color: rgba(0,0,0,0.5);

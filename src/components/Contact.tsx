@@ -98,25 +98,26 @@ const ContactContainer = styled.div`
     ::-webkit-scrollbar{
         display:none;
     }
-    @media screen and (max-width:1000px) {
-       max-height: 85vh;
+    @media screen and (max-width:1024px) {
+        max-height: 87vh;
+        max-width: 100%;
     }
 `
 const BackToHome = styled(RiHome7Fill)`
     position:fixed;
-    top:2vh;
-    left:85vw;
+    top:7vh;
+    right:7vw;
     color: #007BFF;
     font-size:36px;
-    @media screen and (max-width:1000px){
-        top:17vh;
-        left:85vw;
+    @media (max-width:1024px){
+        top:15vh;
+        right:7vw;
     }
 `    
 
 const Title = styled.h1`
     margin:0px;
-    padding: 50px;
+    padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +130,7 @@ const Title = styled.h1`
     
 `
 const Paragraph = styled.p`
-    margin:0px;
+    margin:0;
     max-height:20%;
     max-width:30%;
     font-size: clamp(1rem, 5vw, 1rem);
@@ -143,7 +144,7 @@ const Paragraph = styled.p`
 `
 
 const Form = styled.form`
-    height:50vh;
+    height:50%;
     min-width:20%;
     border:1px solid #555;
     border-radius:10px;
@@ -153,9 +154,9 @@ const Form = styled.form`
     justify-content:center;
     align-items:center;
     margin-bottom:3%;
-    @media screen and (max-width:900px){
+    @media screen and (max-width:1024px){
         width: 60%;
-        height:70vh;
+        height:70%;
         overflow-y:scroll;
     }
 

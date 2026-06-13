@@ -69,6 +69,7 @@ const WhatIDoContainer = styled.div`
     }
     @media screen and (max-width:1000px) {
        max-height: 85vh;
+       max-width: 100%;
     }
 
 `
@@ -90,30 +91,32 @@ const BigContainer = styled.div`
     height:70vh;
     display: flex;
     justify-content: center;
-    @media screen and (max-width:900px) {
+    @media (max-width:1024px) {
         width:100%;
-        height: 55vh;
+        height: 70%;
         display: flex;
-        flex-direction:column;
+        flex-wrap:wrap;
         overflow-y:auto;
-        justify-content:flex-start;
-        align-items: center;
     }
 
 
 `
 const Container = styled.div`
-    width:200px;
-    min-height:600px;
+    width:50%;
+    min-height:50%;
     margin:1%;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    overflow: auto;
     strong{
         text-align: center;
         color:  #b1afaf;
         font-size: clamp(1rem, 5vw, 1.5rem);
         padding:10px;  
+    }
+    @media (max-width:1024px){
+        
     }
 `

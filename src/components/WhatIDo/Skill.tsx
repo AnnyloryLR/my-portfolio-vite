@@ -18,14 +18,15 @@ const Skill = ({ name, iconName }: { name: string; iconName: React.ReactElement<
 export default Skill;
 
 const Box = styled.div`
-    margin: 10px;
-    padding: 10px;
+    width:50%;
+    height:50%;
+    margin: 1%;
+    padding: 1%;
+    border:1px solid aliceblue;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    width:90px;
-    height:100px;
     border-radius:10px;
     background-color:#555555;
     cursor:pointer;
@@ -37,10 +38,9 @@ const Box = styled.div`
 
     }
     .react-icon{
-        font-size:80px;
+        font-size:50px;
         line-height: 2;
         text-align: center;
         color:#007bff;
-    }
-    
+    }    
 `
