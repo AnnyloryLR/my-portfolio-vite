@@ -67,7 +67,7 @@ const WhatIDoContainer = styled.div`
     ::-webkit-scrollbar{
         display: none;
     }
-    @media screen and (max-width:1000px) {
+    @media (max-width:1000px) {
        max-height: 85vh;
        max-width: 100%;
     }
@@ -80,7 +80,7 @@ const Title = styled.h1`
     justify-content: center;
     font-size: clamp(1rem, 5vw, 4rem);
     color:#007bff;
-    @media screen and (max-width:900px) {
+    @media (max-width:900px) {
         font-size:2rem;
         
     }
@@ -111,12 +111,16 @@ const Container = styled.div`
     justify-content:center;
     overflow: auto;
     strong{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         color:  #b1afaf;
         font-size: clamp(1rem, 5vw, 1.5rem);
-        padding:10px;  
+         
     }
-    @media (max-width:1024px){
-        
-    }
+
 `

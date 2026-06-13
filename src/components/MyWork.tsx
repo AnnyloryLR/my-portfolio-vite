@@ -95,8 +95,8 @@ const Title = styled.h1`
 `
 
 const WorkGrid = styled.div`
-    width:80%;
-    height: 70%;
+    width:70%;
+    height: 50%;
     border-top:3px groove #006ff7;
     border-radius:10px;
     padding:2%;
@@ -140,6 +140,7 @@ const ShortItem = styled.div`
         text-decoration:none;
         color:#006ff7;
         text-align: center;
+        margin:5%;
     }
  
 `

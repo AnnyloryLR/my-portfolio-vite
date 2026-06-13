@@ -52,7 +52,7 @@ const HeroPage = styled.div`
 `
 const WelcomeText = styled.h1`
     padding:2%;
-    font-size: 4rem;
+    font-size: 2rem;
     line-height: 2;
     font-weight: 500;
     @media (max-width:1024px){
