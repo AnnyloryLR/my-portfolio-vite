@@ -1,6 +1,7 @@
 import styled from  "styled-components";
 import { Link } from "react-router-dom";
 import cvPicture from "../assets/cv_image.png";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 const SideBar = () => {
@@ -11,6 +12,11 @@ const SideBar = () => {
           <img id="cvPicture" src={cvPicture} />
           <MyName>Annylory Rosa</MyName>       
       </Profile>
+      <SocialMediaLinks>
+        <a href="https://github.com/AnnyloryLR"><FaGithub color={'#007BFF'} size={30}/></a>
+        <a href="https://www.linkedin.com/in/annylory-lima-rosa/"><FaLinkedin color={'#007BFF'} size={30}/></a>
+      </SocialMediaLinks>
+      
       <Menu >
         <Link to="/">Home</Link>
         <Link to="/about" >About me</Link>
@@ -37,7 +43,7 @@ const NavBarStyle = styled.nav`
   align-items: center;
 
   @media (max-width:1024px) {
-    border-bottom: 1px inset #141414;
+    border-bottom: 1px solid aliceblue;
     border-right:none;
     height: 12vh;
     width:100%;
@@ -87,6 +93,24 @@ const MyName = styled.p`
   text-align:center;
   @media (max-width:1024px) {
     font-size:0.5rem;
+  }
+`
+
+const SocialMediaLinks = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a{
+
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width:1024){
+    display:none;
   }
 `
 

@@ -99,8 +99,8 @@ const ContactContainer = styled.div`
         display:none;
     }
     @media screen and (max-width:1024px) {
-        max-height: 87vh;
-        max-width: 100%;
+        max-height: 84vh;
+        width: 100%;
     }
 `
 const BackToHome = styled(RiHome7Fill)`
@@ -125,7 +125,6 @@ const Title = styled.h1`
     color:#007bff;
     @media screen and (max-width:900px){
         font-size:2rem;
-        width: 100%;
     }
     
 `
