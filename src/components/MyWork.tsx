@@ -116,33 +116,6 @@ const WorkGrid = styled.div`
     }
 
 `
-// const ShortItem = styled.div`
-//     width:80%;
-//     height:100%;
-//     border-radius:10px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: #062783;
-//     img{
-//         margin-top: 2%;
-//         width: 60%;
-//         height: 60%;
-//         border-radius:5%;
-//     }
-//     a{
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         font-size:0.8rem;
-//         text-decoration:none;
-//         color:#006ff7;
-//         text-align: center;
-//         margin:5%;
-//     }
- 
-// `
 const Item = styled.div`
     width:50%;
     height:70%;
@@ -184,36 +157,7 @@ const Item = styled.div`
 
     
 `
-// const WideItem = styled.div`
-//     margin:2%;
-//     border-radius:10px;
-//     display:grid;
-//     grid-column: span 2; 
-//     align-items:center;
-//     justify-content:center;
-//     height:100%;
-//     width:80%;
-//     background-color: #062783;
-//     iframe{
-//         margin:5%;
-//         height:70%;
-//         width: 90%;
-//         border-style:none;
-//         border-radius:5%;
 
-//     }
-//     a{  
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         font-size:0.8rem;
-//         text-decoration:none;
-//         color: #006ff7;
-//         text-align: center;
-//     }
-
-// `
 const StyledIcon = styled(FaGithub)`
     font-size:30px;
     color: #006ff7;
