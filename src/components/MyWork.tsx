@@ -134,7 +134,7 @@ const Item = styled.div`
         margin-top: 5%;
         width: 80%;
         height: 80%;
-       border-radius:5%;
+        border-radius:5%;
     }
     iframe{
         margin:5%;
