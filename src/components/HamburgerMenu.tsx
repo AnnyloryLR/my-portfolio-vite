@@ -18,7 +18,7 @@ const HamburgerMenu = () => {
     return(
         <HamburgerMenuStyle >
             <Menu onClick={showMenu}/>
-            <MenuPopUp onClick={() => setSelected(false)}>
+            <MenuPopUp $isSelected={isSelected} onClick={showMenu}>
                <HamburgerMenuItens $isSelected={isSelected}>
                 <Link to="/">Home</Link>
                 <Link to="/about" >About me</Link>
@@ -58,13 +58,13 @@ const Menu = styled(IoMenuOutline)`
   margin:5%;
  
 `
-const MenuPopUp = styled.div`
+const MenuPopUp = styled.div<{$isSelected: boolean}>`
   width: 80%;
   height: 80%;
   position: fixed;
   top:12vh;
   right:0;
-  display:flex;
+  display:${({$isSelected}) => $isSelected ? 'flex' :'none'};
   justify-content: right;
 
  
